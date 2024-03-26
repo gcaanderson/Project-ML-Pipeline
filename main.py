@@ -54,7 +54,8 @@ def go(config: DictConfig):
                 os.path.join(root_path, "basic_cleaning"),
                 "main",
                 parameters = {
-                    
+                    "input_artifact": "raw_data.csv:latest",
+                    "output_artifact": "clean_data.csv"
                 },
             )
             ##################
@@ -62,13 +63,31 @@ def go(config: DictConfig):
 
         if "data_check" in active_steps:
             ##################
-            # Implement here #
+            _ = mlflow.run(
+                os.path.join(root_path, "data_check"), 
+                "main", 
+                parameters = {
+                    "reference_artifact": config["data"]["reference_dataset"], 
+                    "sample_artifact": "clean_data.csv:latest", 
+                    "ks_alpha": config["data"]["ks_alpha"]
+                },
+            )
             ##################
             pass
 
         if "data_split" in active_steps:
             ##################
-            # Implement here #
+            _ = mlflow.run(
+                os.path.join(root_path, "segregate"),
+                "main",
+                parameters={
+                    "input_artifact": "preprocessed_data.csv:latest",
+                    "artifact_root": "data",
+                    "artifact_type": "segregated_data",
+                    "test_size": config["data"]["test_size"],
+                    "stratify": config["data"]["stratify"]
+                },
+            )
             ##################
             pass
 
@@ -79,11 +98,21 @@ def go(config: DictConfig):
             with open(rf_config, "w+") as fp:
                 json.dump(dict(config["modeling"]["random_forest"].items()), fp)  # DO NOT TOUCH
 
-            # NOTE: use the rf_config we just created as the rf_config parameter for the train_random_forest
-            # step
+            # NOTE: use the rf_config we just created as the rf_config parameter for the train_random_forest step
 
             ##################
-            # Implement here #
+            _ = mlflow.run(
+                os.path.join(root_path, "random_forest"),
+                "main",
+                parameters={
+                    "train_data": "data_train.csv:latest",
+                    "model_config": model_config,
+                    "export_artifact": config["random_forest_pipeline"]["export_artifact"],
+                    "random_seed": config["main"]["random_seed"],
+                    "val_size": config["data"]["test_size"],
+                    "stratify": config["data"]["stratify"]
+                },
+            )
             ##################
 
             pass
@@ -91,7 +120,14 @@ def go(config: DictConfig):
         if "test_regression_model" in active_steps:
 
             ##################
-            # Implement here #
+            _ = mlflow.run(
+                os.path.join(root_path, "evaluate"),
+                "main",
+                parameters={
+                    "model_export": f"{config['random_forest_pipeline']['export_artifact']}:latest",
+                    "test_data": "data_test.csv:latest"
+                },
+            )
             ##################
 
             pass
