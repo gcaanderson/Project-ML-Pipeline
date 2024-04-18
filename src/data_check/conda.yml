@@ -8,4 +8,4 @@ dependencies:
   - scipy=1.5.2
   - pip=20.3.3
   - pip:
-      - wandb==0.13.9
+      - wandb==0.16.0

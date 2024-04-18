@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/2e606398b40d43418ee6a43cfa2eea65/artifacts
+end_time: 1713215162541
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2e606398b40d43418ee6a43cfa2eea65
+run_name: charming-newt-542
+run_uuid: 2e606398b40d43418ee6a43cfa2eea65
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713215161853
+status: 4
+tags: []
+user_id: gcaanderson

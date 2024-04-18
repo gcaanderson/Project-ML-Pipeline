@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/149be4d8fe494cb58efddb23d3a1f724/artifacts
+end_time: 1713209903244
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 149be4d8fe494cb58efddb23d3a1f724
+run_name: awesome-pug-413
+run_uuid: 149be4d8fe494cb58efddb23d3a1f724
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713209871383
+status: 4
+tags: []
+user_id: gcaanderson

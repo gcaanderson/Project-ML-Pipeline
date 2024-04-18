@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/09305e00800d445db222a4381b39c7e0/artifacts
+end_time: 1713210058370
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 09305e00800d445db222a4381b39c7e0
+run_name: upbeat-rook-850
+run_uuid: 09305e00800d445db222a4381b39c7e0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713210057672
+status: 4
+tags: []
+user_id: gcaanderson

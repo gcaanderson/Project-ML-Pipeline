@@ -1,5 +1,4 @@
 import json
-
 import mlflow
 import tempfile
 import os
@@ -27,6 +26,8 @@ def go(config: DictConfig):
     # Setup the wandb experiment. All runs will be grouped under this name
     os.environ["WANDB_PROJECT"] = config["main"]["project_name"]
     os.environ["WANDB_RUN_GROUP"] = config["main"]["experiment_name"]
+
+    root_path = hydra.utils.get_original_cwd()
 
     # Steps to execute
     steps_par = config['main']['steps']
@@ -106,7 +107,7 @@ def go(config: DictConfig):
                 "main",
                 parameters={
                     "train_data": "data_train.csv:latest",
-                    "model_config": model_config,
+                    "rf_config": rf_config,
                     "export_artifact": config["random_forest_pipeline"]["export_artifact"],
                     "random_seed": config["main"]["random_seed"],
                     "val_size": config["data"]["test_size"],
