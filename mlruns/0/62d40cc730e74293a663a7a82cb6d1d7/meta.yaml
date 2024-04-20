@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/62d40cc730e74293a663a7a82cb6d1d7/artifacts
+end_time: 1713616513945
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 62d40cc730e74293a663a7a82cb6d1d7
+run_name: salty-hound-514
+run_uuid: 62d40cc730e74293a663a7a82cb6d1d7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713616484035
+status: 3
+tags: []
+user_id: gcaanderson

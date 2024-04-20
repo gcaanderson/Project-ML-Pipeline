@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/bba40a86191b43fdb7631f4234b7e844/artifacts
+end_time: 1713616959520
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bba40a86191b43fdb7631f4234b7e844
+run_name: sedate-snake-63
+run_uuid: bba40a86191b43fdb7631f4234b7e844
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713616958141
+status: 4
+tags: []
+user_id: gcaanderson

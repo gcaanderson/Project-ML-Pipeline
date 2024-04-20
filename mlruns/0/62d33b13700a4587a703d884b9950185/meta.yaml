@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/62d33b13700a4587a703d884b9950185/artifacts
+end_time: 1713574619772
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 62d33b13700a4587a703d884b9950185
+run_name: useful-bug-217
+run_uuid: 62d33b13700a4587a703d884b9950185
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713574618421
+status: 4
+tags: []
+user_id: gcaanderson

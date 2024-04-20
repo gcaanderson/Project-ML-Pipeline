@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/e61dfcd3f73d4fbda4cd78f60b813f51/artifacts
+end_time: 1713568819217
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e61dfcd3f73d4fbda4cd78f60b813f51
+run_name: monumental-crane-734
+run_uuid: e61dfcd3f73d4fbda4cd78f60b813f51
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713568789975
+status: 3
+tags: []
+user_id: gcaanderson

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/eaced3e1b051409ab99764fa3ad03e98/artifacts
+end_time: 1713574671393
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eaced3e1b051409ab99764fa3ad03e98
+run_name: enthused-hound-620
+run_uuid: eaced3e1b051409ab99764fa3ad03e98
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713574670044
+status: 4
+tags: []
+user_id: gcaanderson

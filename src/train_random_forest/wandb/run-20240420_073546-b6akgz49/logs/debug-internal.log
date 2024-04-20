@@ -1,0 +1,267 @@
+2024-04-20 07:35:46,038 INFO    StreamThr :523842 [internal.py:wandb_internal():87] W&B internal server running at pid: 523842, started at: 2024-04-20 07:35:46.038111
+2024-04-20 07:35:46,039 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: status
+2024-04-20 07:35:46,040 INFO    WriterThread:523842 [datastore.py:open_for_write():85] open: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/run-b6akgz49.wandb
+2024-04-20 07:35:46,040 DEBUG   SenderThread:523842 [sender.py:send():334] send: header
+2024-04-20 07:35:46,044 DEBUG   SenderThread:523842 [sender.py:send():334] send: run
+2024-04-20 07:35:46,484 INFO    SenderThread:523842 [dir_watcher.py:__init__():216] watching files in: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files
+2024-04-20 07:35:46,484 INFO    SenderThread:523842 [sender.py:_start_run_threads():1065] run started: b6akgz49 with start time 1713616546.037796
+2024-04-20 07:35:46,484 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: summary_record
+2024-04-20 07:35:46,484 INFO    SenderThread:523842 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2024-04-20 07:35:46,485 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: check_version
+2024-04-20 07:35:46,485 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: check_version
+2024-04-20 07:35:46,610 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: run_start
+2024-04-20 07:35:46,641 DEBUG   HandlerThread:523842 [system_info.py:__init__():31] System info init
+2024-04-20 07:35:46,641 DEBUG   HandlerThread:523842 [system_info.py:__init__():46] System info init done
+2024-04-20 07:35:46,642 INFO    HandlerThread:523842 [system_monitor.py:start():151] Starting system monitor
+2024-04-20 07:35:46,642 INFO    SystemMonitor:523842 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2024-04-20 07:35:46,642 INFO    HandlerThread:523842 [system_monitor.py:probe():172] Collecting system info
+2024-04-20 07:35:46,642 INFO    SystemMonitor:523842 [interfaces.py:start():168] Started cpu
+2024-04-20 07:35:46,642 INFO    SystemMonitor:523842 [interfaces.py:start():168] Started disk
+2024-04-20 07:35:46,643 INFO    SystemMonitor:523842 [interfaces.py:start():168] Started gpu
+2024-04-20 07:35:46,643 INFO    SystemMonitor:523842 [interfaces.py:start():168] Started memory
+2024-04-20 07:35:46,644 INFO    SystemMonitor:523842 [interfaces.py:start():168] Started network
+2024-04-20 07:35:46,655 DEBUG   HandlerThread:523842 [system_info.py:probe():195] Probing system
+2024-04-20 07:35:46,670 DEBUG   HandlerThread:523842 [system_info.py:_probe_git():180] Probing git
+2024-04-20 07:35:46,675 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:35:46,676 DEBUG   HandlerThread:523842 [system_info.py:_probe_git():188] Probing git done
+2024-04-20 07:35:46,676 DEBUG   HandlerThread:523842 [system_info.py:probe():241] Probing system done
+2024-04-20 07:35:46,676 DEBUG   HandlerThread:523842 [system_monitor.py:probe():181] {'os': 'Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35', 'python': '3.9.19', 'heartbeatAt': '2024-04-20T12:35:46.655327', 'startedAt': '2024-04-20T12:35:46.032558', 'docker': None, 'cuda': None, 'args': ('--trainval_artifact', 'trainval_data.csv:latest', '--val_size', '0.2', '--random_seed', '42', '--stratify_by', 'neighbourhood_group', '--rf_config', '/home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/multirun/2024-04-20/07-34-43/2/rf_config.json', '--max_tfidf_features', '5', '--output_artifact', 'random_forest_export'), 'state': 'running', 'program': '/home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/run.py', 'codePath': 'src/train_random_forest/run.py', 'git': {'remote': 'https://github.com/gcaanderson/Project-ML-Pipeline.git', 'commit': 'c12264d1795871930ef5758f55ed4e41e56b656e'}, 'email': 'gallagha24@yahoo.com', 'root': '/home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline', 'host': 'DESKTOP-MGTK7L3', 'username': 'gcaanderson', 'executable': '/home/gcaanderson/miniconda3/envs/mlflow-f4ee7dddc8136b62f06437bbfb299014dcd2fa7d/bin/python', 'cpu_count': 12, 'cpu_count_logical': 24, 'cpu_freq': {'current': 3187.199999999999, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 1006.853931427002, 'used': 17.184829711914062}, 'gpu': 'NVIDIA GeForce RTX 4060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4060', 'memory_total': 8585740288}], 'memory': {'total': 15.4937744140625}}
+2024-04-20 07:35:46,676 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:35:46,676 INFO    HandlerThread:523842 [system_monitor.py:probe():182] Finished collecting system info
+2024-04-20 07:35:46,676 INFO    HandlerThread:523842 [system_monitor.py:probe():185] Publishing system info
+2024-04-20 07:35:46,676 DEBUG   HandlerThread:523842 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2024-04-20 07:35:46,676 DEBUG   HandlerThread:523842 [system_info.py:_save_pip():67] Saving pip packages done
+2024-04-20 07:35:46,676 DEBUG   HandlerThread:523842 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2024-04-20 07:35:47,474 DEBUG   HandlerThread:523842 [system_info.py:_save_conda():86] Saving conda packages done
+2024-04-20 07:35:47,474 INFO    HandlerThread:523842 [system_monitor.py:probe():187] Finished publishing system info
+2024-04-20 07:35:47,476 DEBUG   SenderThread:523842 [sender.py:send():334] send: files
+2024-04-20 07:35:47,476 INFO    SenderThread:523842 [sender.py:_save_file():1319] saving file wandb-metadata.json with policy now
+2024-04-20 07:35:47,481 DEBUG   SenderThread:523842 [sender.py:send():334] send: telemetry
+2024-04-20 07:35:47,481 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-20 07:35:47,481 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: stop_status
+2024-04-20 07:35:47,485 INFO    Thread-13 :523842 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/conda-environment.yaml
+2024-04-20 07:35:47,485 INFO    Thread-13 :523842 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/requirements.txt
+2024-04-20 07:35:47,486 INFO    Thread-13 :523842 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/wandb-summary.json
+2024-04-20 07:35:47,486 INFO    Thread-13 :523842 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/wandb-metadata.json
+2024-04-20 07:35:47,730 DEBUG   SenderThread:523842 [sender.py:send():334] send: config
+2024-04-20 07:35:47,731 DEBUG   SenderThread:523842 [sender.py:send():334] send: config
+2024-04-20 07:35:47,972 INFO    Thread-16 :523842 [upload_job.py:push():143] Uploaded file /tmp/tmp6k1qlak5wandb/szkwpzwr-wandb-metadata.json
+2024-04-20 07:35:48,029 DEBUG   SenderThread:523842 [sender.py:send():334] send: use_artifact
+2024-04-20 07:35:48,485 INFO    Thread-13 :523842 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/output.log
+2024-04-20 07:35:48,684 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:35:48,684 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:35:50,485 INFO    Thread-13 :523842 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/output.log
+2024-04-20 07:35:50,689 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:35:50,690 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:35:51,426 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: status_report
+2024-04-20 07:35:52,695 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:35:52,696 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:35:54,700 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:35:54,700 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:35:56,427 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: status_report
+2024-04-20 07:35:56,705 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:35:56,706 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:35:58,711 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:35:58,711 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:00,720 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:00,721 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:01,428 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: status_report
+2024-04-20 07:36:02,480 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-20 07:36:02,482 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-20 07:36:02,727 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:02,727 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:04,733 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:04,733 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:06,428 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: status_report
+2024-04-20 07:36:06,738 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:06,738 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:08,482 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-20 07:36:08,743 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:08,744 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:10,757 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:10,758 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:11,429 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: status_report
+2024-04-20 07:36:12,763 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:12,764 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:13,484 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-20 07:36:14,769 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:14,770 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:16,491 INFO    Thread-13 :523842 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/output.log
+2024-04-20 07:36:16,774 ERROR   gpu       :523842 [interfaces.py:aggregate():146] Failed to serialize metric: division by zero
+2024-04-20 07:36:16,779 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:16,780 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:16,796 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: status_report
+2024-04-20 07:36:17,058 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: log_artifact
+2024-04-20 07:36:17,058 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: log_artifact
+2024-04-20 07:36:17,491 INFO    Thread-13 :523842 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/config.yaml
+2024-04-20 07:36:17,600 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: partial_history
+2024-04-20 07:36:18,095 INFO    Thread-20 :523842 [upload_job.py:push():98] Skipped uploading /home/gcaanderson/.local/share/wandb/artifacts/staging/tmpdu2k7sjf
+2024-04-20 07:36:18,095 INFO    Thread-19 :523842 [upload_job.py:push():98] Skipped uploading /home/gcaanderson/.local/share/wandb/artifacts/staging/tmp_xnyj0gp
+2024-04-20 07:36:18,095 INFO    Thread-22 :523842 [upload_job.py:push():98] Skipped uploading /home/gcaanderson/.local/share/wandb/artifacts/staging/tmp35r52eo0
+2024-04-20 07:36:18,096 INFO    Thread-23 :523842 [upload_job.py:push():98] Skipped uploading /home/gcaanderson/.local/share/wandb/artifacts/staging/tmp_kw5hddz
+2024-04-20 07:36:18,379 INFO    Thread-18 :523842 [upload_job.py:push():101] Uploaded file /home/gcaanderson/.local/share/wandb/artifacts/staging/tmps4y_esc7
+2024-04-20 07:36:18,491 INFO    Thread-13 :523842 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/output.log
+2024-04-20 07:36:18,492 INFO    Thread-13 :523842 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/media/images/feature_importance_0_18c8d04dfa4fbf50fec1.png
+2024-04-20 07:36:18,492 INFO    Thread-13 :523842 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/media/images
+2024-04-20 07:36:18,492 INFO    Thread-13 :523842 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/media
+2024-04-20 07:36:18,603 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: poll_exit
+2024-04-20 07:36:18,786 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:18,786 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:18,995 INFO    Thread-24 :523842 [upload_job.py:push():143] Uploaded file /tmp/tmp6k1qlak5wandb/lw2yyese-media/images/feature_importance_0_18c8d04dfa4fbf50fec1.png
+2024-04-20 07:36:20,793 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:20,794 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:22,800 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:22,801 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:23,606 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-20 07:36:24,807 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:24,807 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:26,814 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:26,814 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:28,607 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-20 07:36:28,821 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:28,821 ERROR   gpu       :523842 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-20 07:36:29,763 INFO    Thread-21 :523842 [upload_job.py:push():101] Uploaded file /home/gcaanderson/.local/share/wandb/artifacts/staging/tmpnyq26kvk
+2024-04-20 07:36:30,611 INFO    SenderThread:523842 [sender.py:send_request_log_artifact():1379] logged artifact random_forest_export - {'id': 'QXJ0aWZhY3Q6ODAzODA2NTcx', 'digest': 'd96cf85396446dd3db96a3aca01b887f', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE2NDY3NzcwMA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODAzODA2MDYz', 'versionIndex': 1}}, 'version': 'latest'}
+2024-04-20 07:36:30,611 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: summary_record
+2024-04-20 07:36:30,612 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: status_report
+2024-04-20 07:36:30,613 INFO    SenderThread:523842 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2024-04-20 07:36:30,613 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: summary_record
+2024-04-20 07:36:30,613 INFO    SenderThread:523842 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2024-04-20 07:36:30,614 DEBUG   SenderThread:523842 [sender.py:send():334] send: files
+2024-04-20 07:36:30,614 INFO    SenderThread:523842 [sender.py:_save_file():1319] saving file media/images/feature_importance_0_18c8d04dfa4fbf50fec1.png with policy now
+2024-04-20 07:36:30,614 DEBUG   SenderThread:523842 [sender.py:send():334] send: history
+2024-04-20 07:36:30,614 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: summary_record
+2024-04-20 07:36:30,614 INFO    SenderThread:523842 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2024-04-20 07:36:30,614 DEBUG   SenderThread:523842 [sender.py:send():334] send: exit
+2024-04-20 07:36:30,614 INFO    SenderThread:523842 [sender.py:send_exit():557] handling exit code: 0
+2024-04-20 07:36:30,614 INFO    SenderThread:523842 [sender.py:send_exit():559] handling runtime: 30
+2024-04-20 07:36:30,614 INFO    SenderThread:523842 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2024-04-20 07:36:30,615 INFO    SenderThread:523842 [sender.py:send_exit():565] send defer
+2024-04-20 07:36:30,615 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: poll_exit
+2024-04-20 07:36:30,615 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:30,616 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 0
+2024-04-20 07:36:30,617 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:30,617 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 0
+2024-04-20 07:36:30,617 INFO    SenderThread:523842 [sender.py:transition_state():585] send defer: 1
+2024-04-20 07:36:30,617 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:30,617 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 1
+2024-04-20 07:36:30,617 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:30,617 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 1
+2024-04-20 07:36:30,617 INFO    SenderThread:523842 [sender.py:transition_state():585] send defer: 2
+2024-04-20 07:36:30,617 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:30,617 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 2
+2024-04-20 07:36:30,617 INFO    HandlerThread:523842 [system_monitor.py:finish():161] Stopping system monitor
+2024-04-20 07:36:30,617 DEBUG   SystemMonitor:523842 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2024-04-20 07:36:30,618 INFO    HandlerThread:523842 [interfaces.py:finish():175] Joined cpu
+2024-04-20 07:36:30,618 DEBUG   SystemMonitor:523842 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2024-04-20 07:36:30,618 INFO    HandlerThread:523842 [interfaces.py:finish():175] Joined disk
+2024-04-20 07:36:30,618 DEBUG   SystemMonitor:523842 [system_monitor.py:_start():141] Publishing last batch of metrics
+2024-04-20 07:36:30,622 ERROR   gpu       :523842 [interfaces.py:aggregate():146] Failed to serialize metric: division by zero
+2024-04-20 07:36:30,622 INFO    HandlerThread:523842 [interfaces.py:finish():175] Joined gpu
+2024-04-20 07:36:30,622 INFO    HandlerThread:523842 [interfaces.py:finish():175] Joined memory
+2024-04-20 07:36:30,622 INFO    HandlerThread:523842 [interfaces.py:finish():175] Joined network
+2024-04-20 07:36:30,622 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:30,622 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 2
+2024-04-20 07:36:30,622 INFO    SenderThread:523842 [sender.py:transition_state():585] send defer: 3
+2024-04-20 07:36:30,623 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:30,623 DEBUG   SenderThread:523842 [sender.py:send():334] send: stats
+2024-04-20 07:36:30,623 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 3
+2024-04-20 07:36:30,623 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:30,623 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 3
+2024-04-20 07:36:30,623 INFO    SenderThread:523842 [sender.py:transition_state():585] send defer: 4
+2024-04-20 07:36:30,623 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:30,623 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 4
+2024-04-20 07:36:30,623 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:30,623 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 4
+2024-04-20 07:36:30,623 INFO    SenderThread:523842 [sender.py:transition_state():585] send defer: 5
+2024-04-20 07:36:30,623 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:30,623 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 5
+2024-04-20 07:36:30,624 DEBUG   SenderThread:523842 [sender.py:send():334] send: summary
+2024-04-20 07:36:30,624 INFO    SenderThread:523842 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2024-04-20 07:36:30,624 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:30,624 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 5
+2024-04-20 07:36:30,624 INFO    SenderThread:523842 [sender.py:transition_state():585] send defer: 6
+2024-04-20 07:36:30,624 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:30,624 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 6
+2024-04-20 07:36:30,624 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:30,624 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 6
+2024-04-20 07:36:30,624 INFO    SenderThread:523842 [sender.py:transition_state():585] send defer: 7
+2024-04-20 07:36:30,624 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: status_report
+2024-04-20 07:36:30,624 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:30,624 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 7
+2024-04-20 07:36:30,625 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:30,625 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 7
+2024-04-20 07:36:31,258 INFO    Thread-25 :523842 [upload_job.py:push():143] Uploaded file /tmp/tmp6k1qlak5wandb/ntkec7cl-media/images/feature_importance_0_18c8d04dfa4fbf50fec1.png
+2024-04-20 07:36:31,497 INFO    Thread-13 :523842 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/wandb-summary.json
+2024-04-20 07:36:32,472 INFO    SenderThread:523842 [sender.py:transition_state():585] send defer: 8
+2024-04-20 07:36:32,473 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:32,473 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 8
+2024-04-20 07:36:32,474 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:32,474 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 8
+2024-04-20 07:36:32,480 INFO    SenderThread:523842 [sender.py:transition_state():585] send defer: 9
+2024-04-20 07:36:32,481 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:32,481 DEBUG   SenderThread:523842 [sender.py:send():334] send: artifact
+2024-04-20 07:36:32,481 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 9
+2024-04-20 07:36:32,497 INFO    Thread-13 :523842 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/output.log
+2024-04-20 07:36:33,265 INFO    SenderThread:523842 [sender.py:send_artifact():1415] sent artifact job-https___github.com_gcaanderson_Project-ML-Pipeline.git_src_train_random_forest_run.py - {'id': 'QXJ0aWZhY3Q6ODAzODA1ODEx', 'digest': '94b4480b9b19b825729bcb7ca2eeef7b', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_gcaanderson_Project-ML-Pipeline.git_src_train_random_forest_run.py', 'alias': 'v1'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE2NDU1Nzk0OA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODAzODA1ODEx', 'versionIndex': 1}}, 'version': 'v1'}
+2024-04-20 07:36:33,266 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:33,266 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 9
+2024-04-20 07:36:33,266 INFO    SenderThread:523842 [dir_watcher.py:finish():362] shutting down directory watcher
+2024-04-20 07:36:33,498 INFO    SenderThread:523842 [dir_watcher.py:finish():392] scan: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files
+2024-04-20 07:36:33,498 INFO    SenderThread:523842 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/conda-environment.yaml conda-environment.yaml
+2024-04-20 07:36:33,498 INFO    SenderThread:523842 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/requirements.txt requirements.txt
+2024-04-20 07:36:33,499 INFO    SenderThread:523842 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/wandb-summary.json wandb-summary.json
+2024-04-20 07:36:33,500 INFO    SenderThread:523842 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/wandb-metadata.json wandb-metadata.json
+2024-04-20 07:36:33,501 INFO    SenderThread:523842 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/output.log output.log
+2024-04-20 07:36:33,502 INFO    SenderThread:523842 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/config.yaml config.yaml
+2024-04-20 07:36:33,504 INFO    SenderThread:523842 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/media/images/feature_importance_0_18c8d04dfa4fbf50fec1.png media/images/feature_importance_0_18c8d04dfa4fbf50fec1.png
+2024-04-20 07:36:33,505 INFO    SenderThread:523842 [sender.py:transition_state():585] send defer: 10
+2024-04-20 07:36:33,505 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:33,505 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 10
+2024-04-20 07:36:33,505 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:33,505 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 10
+2024-04-20 07:36:33,505 INFO    SenderThread:523842 [file_pusher.py:finish():160] shutting down file pusher
+2024-04-20 07:36:33,609 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-20 07:36:33,964 INFO    Thread-27 :523842 [upload_job.py:push():143] Uploaded file /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/requirements.txt
+2024-04-20 07:36:33,977 INFO    Thread-30 :523842 [upload_job.py:push():143] Uploaded file /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/config.yaml
+2024-04-20 07:36:33,979 INFO    Thread-26 :523842 [upload_job.py:push():143] Uploaded file /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/conda-environment.yaml
+2024-04-20 07:36:34,009 INFO    Thread-28 :523842 [upload_job.py:push():143] Uploaded file /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/wandb-summary.json
+2024-04-20 07:36:34,037 INFO    Thread-29 :523842 [upload_job.py:push():143] Uploaded file /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/files/output.log
+2024-04-20 07:36:34,239 INFO    Thread-12 :523842 [sender.py:transition_state():585] send defer: 11
+2024-04-20 07:36:34,240 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:34,240 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 11
+2024-04-20 07:36:34,242 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:34,242 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 11
+2024-04-20 07:36:34,242 INFO    SenderThread:523842 [file_pusher.py:join():165] waiting for file pusher
+2024-04-20 07:36:34,242 INFO    SenderThread:523842 [sender.py:transition_state():585] send defer: 12
+2024-04-20 07:36:34,243 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:34,243 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 12
+2024-04-20 07:36:34,244 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:34,244 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 12
+2024-04-20 07:36:34,313 INFO    SenderThread:523842 [sender.py:transition_state():585] send defer: 13
+2024-04-20 07:36:34,314 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:34,314 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 13
+2024-04-20 07:36:34,315 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:34,315 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 13
+2024-04-20 07:36:34,315 INFO    SenderThread:523842 [sender.py:transition_state():585] send defer: 14
+2024-04-20 07:36:34,315 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: defer
+2024-04-20 07:36:34,316 INFO    HandlerThread:523842 [handler.py:handle_request_defer():170] handle defer: 14
+2024-04-20 07:36:34,316 DEBUG   SenderThread:523842 [sender.py:send():334] send: final
+2024-04-20 07:36:34,316 DEBUG   SenderThread:523842 [sender.py:send():334] send: footer
+2024-04-20 07:36:34,316 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: defer
+2024-04-20 07:36:34,316 INFO    SenderThread:523842 [sender.py:send_request_defer():581] handle sender defer: 14
+2024-04-20 07:36:34,317 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: poll_exit
+2024-04-20 07:36:34,317 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: poll_exit
+2024-04-20 07:36:34,318 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: server_info
+2024-04-20 07:36:34,318 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: get_summary
+2024-04-20 07:36:34,319 DEBUG   SenderThread:523842 [sender.py:send_request():361] send_request: server_info
+2024-04-20 07:36:34,321 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: sampled_history
+2024-04-20 07:36:34,501 INFO    MainThread:523842 [wandb_run.py:_footer_history_summary_info():3427] rendering history
+2024-04-20 07:36:34,502 INFO    MainThread:523842 [wandb_run.py:_footer_history_summary_info():3459] rendering summary
+2024-04-20 07:36:34,502 INFO    MainThread:523842 [wandb_run.py:_footer_sync_info():3383] logging synced files
+2024-04-20 07:36:34,502 DEBUG   HandlerThread:523842 [handler.py:handle_request():144] handle_request: shutdown
+2024-04-20 07:36:34,503 INFO    HandlerThread:523842 [handler.py:finish():841] shutting down handler
+2024-04-20 07:36:35,319 INFO    WriterThread:523842 [datastore.py:close():299] close: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/wandb/run-20240420_073546-b6akgz49/run-b6akgz49.wandb
+2024-04-20 07:36:35,502 INFO    SenderThread:523842 [sender.py:finish():1491] shutting down sender
+2024-04-20 07:36:35,503 INFO    SenderThread:523842 [file_pusher.py:finish():160] shutting down file pusher
+2024-04-20 07:36:35,504 INFO    SenderThread:523842 [file_pusher.py:join():165] waiting for file pusher

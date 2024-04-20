@@ -69,7 +69,7 @@ def go(config: DictConfig):
         if "data_check" in active_steps:
             ##################
             _ = mlflow.run(
-                os.path.join(root_path, "components", "data_check"), 
+                os.path.join(root_path, "src", "data_check"), 
                 "main", 
                 parameters = {
                     "csv": "clean_sample.csv:latest",
@@ -84,17 +84,16 @@ def go(config: DictConfig):
 
         if "data_split" in active_steps:
             ##################
-            #_ = mlflow.run(
-            #    os.path.join(root_path, "segregate"),
-            #    "main",
-            #    parameters={
-            #        "input_artifact": "preprocessed_data.csv:latest",
-            #        "artifact_root": "data",
-            #        "artifact_type": "segregated_data",
-            #        "test_size": config["data"]["test_size"],
-            #        "stratify": config["data"]["stratify"]
-            #    },
-            #)
+            _ = mlflow.run(
+                f"{config['main']['components_repository']}/train_val_test_split",
+                'main',
+                parameters={
+                    "input": "clean_sample.csv:latest",
+                    "test_size": config["modeling"]["test_size"],
+                    "stratify_by": config["modeling"]["stratify_by"],
+                    "random_seed": config["modeling"]["random_seed"]
+                },
+            )
             ##################
             pass
 
@@ -108,18 +107,19 @@ def go(config: DictConfig):
             # NOTE: use the rf_config we just created as the rf_config parameter for the train_random_forest step
 
             ##################
-           # _ = mlflow.run(
-           #     os.path.join(root_path, "random_forest"),
-           #     "main",
-           #     parameters={
-           #         "train_data": "data_train.csv:latest",
-           #         "rf_config": rf_config,
-           #         "export_artifact": config["random_forest_pipeline"]["export_artifact"],
-           #         "random_seed": config["main"]["random_seed"],
-           #         "val_size": config["data"]["test_size"],
-           #         "stratify": config["data"]["stratify"]
-           #     },
-           # )
+            _ = mlflow.run(
+                os.path.join(root_path, "src", "train_random_forest"),
+                "main",
+                parameters={
+                    "trainval_artifact": "trainval_data.csv:latest",
+                    "val_size": config["modeling"]["val_size"],
+                    "random_seed": config["modeling"]["random_seed"],
+                    "stratify_by": config["modeling"]["stratify_by"],
+                    "rf_config": rf_config,
+                    "max_tfidf_features": config["modeling"]["max_tfidf_features"],
+                    "output_artifact": "random_forest_export"
+                },
+            )
             ##################
 
             pass
@@ -127,14 +127,14 @@ def go(config: DictConfig):
         if "test_regression_model" in active_steps:
 
             ##################
-          #  _ = mlflow.run(
-          #      os.path.join(root_path, "evaluate"),
-          #      "main",
-          #      parameters={
-          #          "model_export": f"{config['random_forest_pipeline']['export_artifact']}:latest",
-          #          "test_data": "data_test.csv:latest"
-          #      },
-          #  )
+            _ = mlflow.run(
+                f"{config['main']['components_repository']}/test_regression_model",
+                'main',
+                parameters={
+                    "mlflow_model": "random_forest_export:prod",
+                    "test_dataset": "test_data.csv:latest"
+                },
+            )
             ##################
 
             pass

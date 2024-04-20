@@ -1,0 +1,9 @@
+2024-04-19 20:36:28,348 Minimum price: 10, Maximum price: 350
+2024-04-19 20:36:28,355 Preparing sklearn pipeline
+2024-04-19 20:36:28,356 Fitting
+Traceback (most recent call last):
+  File "/home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/run.py", line 297, in <module>
+    go(args)
+  File "/home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/train_random_forest/run.py", line 76, in go
+    pipe = make_pipeline(SimpleImputer(), StandardScaler(), LogisticRegression())
+NameError: name 'StandardScaler' is not defined

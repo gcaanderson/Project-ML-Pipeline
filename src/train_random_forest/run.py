@@ -73,8 +73,7 @@ def go(args):
 
     ######################################
     # Fit the pipeline sk_pipe by calling the .fit method on X_train and y_train
-    pipe = make_pipeline(SimpleImputer(), StandardScaler(), LogisticRegression())
-    pipe.fit(X_train, y_train)
+    sk_pipe.fit(X_train, y_train)
     ######################################
 
     # Compute r2 and MAE
@@ -98,7 +97,7 @@ def go(args):
     # HINT: use mlflow.sklearn.save_model
     signature = mlflow.models.infer_signature(X_val, y_pred)
     mlflow.sklearn.save_model(
-        pipe, 
+        sk_pipe, 
         "random_forest_dir",
         signature = signature,
         input_example = X_train.iloc[:5]

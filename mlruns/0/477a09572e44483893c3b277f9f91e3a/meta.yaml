@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/477a09572e44483893c3b277f9f91e3a/artifacts
+end_time: 1713577282265
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 477a09572e44483893c3b277f9f91e3a
+run_name: capable-foal-405
+run_uuid: 477a09572e44483893c3b277f9f91e3a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713577269507
+status: 4
+tags: []
+user_id: gcaanderson

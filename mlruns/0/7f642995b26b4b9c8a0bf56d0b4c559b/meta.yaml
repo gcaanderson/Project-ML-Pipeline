@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/7f642995b26b4b9c8a0bf56d0b4c559b/artifacts
+end_time: 1713574819947
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7f642995b26b4b9c8a0bf56d0b4c559b
+run_name: loud-finch-951
+run_uuid: 7f642995b26b4b9c8a0bf56d0b4c559b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713574814146
+status: 4
+tags: []
+user_id: gcaanderson

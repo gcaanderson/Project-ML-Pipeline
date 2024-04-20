@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/b0537313c78940a29fa8184b255f5af0/artifacts
+end_time: 1713576457171
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b0537313c78940a29fa8184b255f5af0
+run_name: judicious-ant-69
+run_uuid: b0537313c78940a29fa8184b255f5af0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713576455505
+status: 4
+tags: []
+user_id: gcaanderson

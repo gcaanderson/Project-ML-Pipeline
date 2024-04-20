@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/972da072cf0940d4b0e8f93155afb360/artifacts
+end_time: 1713576995987
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 972da072cf0940d4b0e8f93155afb360
+run_name: grandiose-sow-145
+run_uuid: 972da072cf0940d4b0e8f93155afb360
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713576923528
+status: 4
+tags: []
+user_id: gcaanderson

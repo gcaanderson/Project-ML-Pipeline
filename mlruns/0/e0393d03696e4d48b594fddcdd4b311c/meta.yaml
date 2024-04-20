@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/e0393d03696e4d48b594fddcdd4b311c/artifacts
+end_time: 1713574454087
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e0393d03696e4d48b594fddcdd4b311c
+run_name: fun-smelt-841
+run_uuid: e0393d03696e4d48b594fddcdd4b311c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713574452713
+status: 4
+tags: []
+user_id: gcaanderson

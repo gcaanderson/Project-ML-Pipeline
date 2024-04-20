@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/ef206b4f56b943fbb4393c53845bf739/artifacts
+end_time: 1713574500508
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ef206b4f56b943fbb4393c53845bf739
+run_name: sneaky-carp-256
+run_uuid: ef206b4f56b943fbb4393c53845bf739
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713574499142
+status: 4
+tags: []
+user_id: gcaanderson

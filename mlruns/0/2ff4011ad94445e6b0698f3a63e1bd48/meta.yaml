@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/2ff4011ad94445e6b0698f3a63e1bd48/artifacts
+end_time: 1713576564473
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2ff4011ad94445e6b0698f3a63e1bd48
+run_name: clumsy-bear-499
+run_uuid: 2ff4011ad94445e6b0698f3a63e1bd48
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713576562899
+status: 4
+tags: []
+user_id: gcaanderson

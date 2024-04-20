@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/69a0234901374db5b8d7121f2f92a845/artifacts
+end_time: 1713616595879
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 69a0234901374db5b8d7121f2f92a845
+run_name: debonair-tern-604
+run_uuid: 69a0234901374db5b8d7121f2f92a845
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713616543858
+status: 3
+tags: []
+user_id: gcaanderson
