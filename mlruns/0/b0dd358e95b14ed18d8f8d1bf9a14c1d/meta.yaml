@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/b0dd358e95b14ed18d8f8d1bf9a14c1d/artifacts
+end_time: 1713618578916
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b0dd358e95b14ed18d8f8d1bf9a14c1d
+run_name: chill-crow-500
+run_uuid: b0dd358e95b14ed18d8f8d1bf9a14c1d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713618563495
+status: 3
+tags: []
+user_id: gcaanderson

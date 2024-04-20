@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/42d4ae6f584348d58a7b8a54ad030145/artifacts
+end_time: 1713618605341
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 42d4ae6f584348d58a7b8a54ad030145
+run_name: upset-zebra-692
+run_uuid: 42d4ae6f584348d58a7b8a54ad030145
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713618578924
+status: 3
+tags: []
+user_id: gcaanderson

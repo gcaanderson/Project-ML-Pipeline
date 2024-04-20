@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/709e36688cac456492e600a6f4bf5018/artifacts
+end_time: 1713618563487
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 709e36688cac456492e600a6f4bf5018
+run_name: judicious-steed-929
+run_uuid: 709e36688cac456492e600a6f4bf5018
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713618549681
+status: 3
+tags: []
+user_id: gcaanderson

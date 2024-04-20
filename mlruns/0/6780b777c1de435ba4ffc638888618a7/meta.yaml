@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/6780b777c1de435ba4ffc638888618a7/artifacts
+end_time: 1713618625771
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6780b777c1de435ba4ffc638888618a7
+run_name: rare-lynx-696
+run_uuid: 6780b777c1de435ba4ffc638888618a7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713618607660
+status: 3
+tags: []
+user_id: gcaanderson
