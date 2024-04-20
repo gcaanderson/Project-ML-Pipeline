@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/efe9d7ddb94b4b27a45a1e4561807f93/artifacts
+end_time: 1713481628243
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: efe9d7ddb94b4b27a45a1e4561807f93
+run_name: monumental-rat-902
+run_uuid: efe9d7ddb94b4b27a45a1e4561807f93
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713481627254
+status: 4
+tags: []
+user_id: gcaanderson

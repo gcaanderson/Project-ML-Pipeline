@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/d06a8584e5434961afa394ed10468e63/artifacts
+end_time: 1713483998463
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d06a8584e5434961afa394ed10468e63
+run_name: intelligent-ant-772
+run_uuid: d06a8584e5434961afa394ed10468e63
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713483960138
+status: 4
+tags: []
+user_id: gcaanderson

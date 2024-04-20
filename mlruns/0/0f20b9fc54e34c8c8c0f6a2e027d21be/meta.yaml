@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/0f20b9fc54e34c8c8c0f6a2e027d21be/artifacts
+end_time: 1713568239390
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0f20b9fc54e34c8c8c0f6a2e027d21be
+run_name: traveling-boar-582
+run_uuid: 0f20b9fc54e34c8c8c0f6a2e027d21be
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713568209594
+status: 4
+tags: []
+user_id: gcaanderson

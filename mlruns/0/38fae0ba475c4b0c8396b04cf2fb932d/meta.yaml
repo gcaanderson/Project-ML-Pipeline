@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/38fae0ba475c4b0c8396b04cf2fb932d/artifacts
+end_time: 1713483259243
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 38fae0ba475c4b0c8396b04cf2fb932d
+run_name: painted-owl-209
+run_uuid: 38fae0ba475c4b0c8396b04cf2fb932d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713483258523
+status: 4
+tags: []
+user_id: gcaanderson

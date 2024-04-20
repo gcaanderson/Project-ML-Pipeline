@@ -1,0 +1,388 @@
+2024-04-18 19:06:21,374 INFO    StreamThr :43099 [internal.py:wandb_internal():87] W&B internal server running at pid: 43099, started at: 2024-04-18 19:06:21.373967
+2024-04-18 19:06:21,375 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status
+2024-04-18 19:06:21,376 INFO    WriterThread:43099 [datastore.py:open_for_write():85] open: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/run-6uhejpra.wandb
+2024-04-18 19:06:21,377 DEBUG   SenderThread:43099 [sender.py:send():334] send: header
+2024-04-18 19:06:21,390 DEBUG   SenderThread:43099 [sender.py:send():334] send: run
+2024-04-18 19:06:21,828 INFO    SenderThread:43099 [dir_watcher.py:__init__():216] watching files in: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files
+2024-04-18 19:06:21,828 INFO    SenderThread:43099 [sender.py:_start_run_threads():1065] run started: 6uhejpra with start time 1713485181.373633
+2024-04-18 19:06:21,828 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: summary_record
+2024-04-18 19:06:21,828 INFO    SenderThread:43099 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2024-04-18 19:06:21,829 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: check_version
+2024-04-18 19:06:21,829 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: check_version
+2024-04-18 19:06:21,947 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: run_start
+2024-04-18 19:06:21,970 DEBUG   HandlerThread:43099 [system_info.py:__init__():31] System info init
+2024-04-18 19:06:21,970 DEBUG   HandlerThread:43099 [system_info.py:__init__():46] System info init done
+2024-04-18 19:06:21,970 INFO    HandlerThread:43099 [system_monitor.py:start():151] Starting system monitor
+2024-04-18 19:06:21,970 INFO    SystemMonitor:43099 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2024-04-18 19:06:21,971 INFO    HandlerThread:43099 [system_monitor.py:probe():172] Collecting system info
+2024-04-18 19:06:21,971 INFO    SystemMonitor:43099 [interfaces.py:start():168] Started cpu
+2024-04-18 19:06:21,972 INFO    SystemMonitor:43099 [interfaces.py:start():168] Started disk
+2024-04-18 19:06:21,972 INFO    SystemMonitor:43099 [interfaces.py:start():168] Started gpu
+2024-04-18 19:06:21,973 INFO    SystemMonitor:43099 [interfaces.py:start():168] Started memory
+2024-04-18 19:06:21,973 INFO    SystemMonitor:43099 [interfaces.py:start():168] Started network
+2024-04-18 19:06:21,985 DEBUG   HandlerThread:43099 [system_info.py:probe():195] Probing system
+2024-04-18 19:06:21,999 DEBUG   HandlerThread:43099 [system_info.py:_probe_git():180] Probing git
+2024-04-18 19:06:22,005 DEBUG   HandlerThread:43099 [system_info.py:_probe_git():188] Probing git done
+2024-04-18 19:06:22,005 DEBUG   HandlerThread:43099 [system_info.py:probe():241] Probing system done
+2024-04-18 19:06:22,005 DEBUG   HandlerThread:43099 [system_monitor.py:probe():181] {'os': 'Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35', 'python': '3.9.15', 'heartbeatAt': '2024-04-19T00:06:21.985281', 'startedAt': '2024-04-19T00:06:21.369074', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': 'src/eda/eda.ipynb', 'root': '/home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline', 'git': {'remote': 'https://github.com/gcaanderson/Project-ML-Pipeline.git', 'commit': '2f3f0660f1ae78f20f3702f26906bde3409fc69e'}, 'email': 'gallagha24@yahoo.com', 'host': 'DESKTOP-MGTK7L3', 'username': 'gcaanderson', 'executable': '/home/gcaanderson/miniconda3/envs/mlops/bin/python', 'cpu_count': 12, 'cpu_count_logical': 24, 'cpu_freq': {'current': 3187.199999999999, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}, {'current': 3187.2, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 1006.853931427002, 'used': 13.735881805419922}, 'gpu': 'NVIDIA GeForce RTX 4060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4060', 'memory_total': 8585740288}], 'memory': {'total': 15.4937744140625}}
+2024-04-18 19:06:22,005 INFO    HandlerThread:43099 [system_monitor.py:probe():182] Finished collecting system info
+2024-04-18 19:06:22,005 INFO    HandlerThread:43099 [system_monitor.py:probe():185] Publishing system info
+2024-04-18 19:06:22,005 DEBUG   HandlerThread:43099 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2024-04-18 19:06:22,005 DEBUG   HandlerThread:43099 [system_info.py:_save_pip():67] Saving pip packages done
+2024-04-18 19:06:22,005 DEBUG   HandlerThread:43099 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2024-04-18 19:06:22,011 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:22,012 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:22,829 INFO    Thread-13 :43099 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/requirements.txt
+2024-04-18 19:06:22,829 INFO    Thread-13 :43099 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/wandb-summary.json
+2024-04-18 19:06:22,829 INFO    Thread-13 :43099 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/conda-environment.yaml
+2024-04-18 19:06:23,506 DEBUG   HandlerThread:43099 [system_info.py:_save_conda():86] Saving conda packages done
+2024-04-18 19:06:23,506 DEBUG   HandlerThread:43099 [system_info.py:_save_code():89] Saving code
+2024-04-18 19:06:23,506 WARNING HandlerThread:43099 [system_info.py:_save_code():91] unable to save code -- program entry not found
+2024-04-18 19:06:23,506 DEBUG   HandlerThread:43099 [system_info.py:_save_patches():127] Saving git patches
+2024-04-18 19:06:23,520 DEBUG   HandlerThread:43099 [system_info.py:_save_patches():169] Saving git patches done
+2024-04-18 19:06:23,521 INFO    HandlerThread:43099 [system_monitor.py:probe():187] Finished publishing system info
+2024-04-18 19:06:23,522 DEBUG   SenderThread:43099 [sender.py:send():334] send: files
+2024-04-18 19:06:23,522 INFO    SenderThread:43099 [sender.py:_save_file():1319] saving file wandb-metadata.json with policy now
+2024-04-18 19:06:23,522 INFO    SenderThread:43099 [sender.py:_save_file():1319] saving file diff.patch with policy now
+2024-04-18 19:06:23,533 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: stop_status
+2024-04-18 19:06:23,533 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: stop_status
+2024-04-18 19:06:23,734 DEBUG   SenderThread:43099 [sender.py:send():334] send: telemetry
+2024-04-18 19:06:23,831 INFO    Thread-13 :43099 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/conda-environment.yaml
+2024-04-18 19:06:23,832 INFO    Thread-13 :43099 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/diff.patch
+2024-04-18 19:06:23,832 INFO    Thread-13 :43099 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/wandb-metadata.json
+2024-04-18 19:06:24,018 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:24,019 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:24,114 INFO    Thread-16 :43099 [upload_job.py:push():143] Uploaded file /tmp/tmpq3m9cv7qwandb/ul5j0pja-wandb-metadata.json
+2024-04-18 19:06:24,261 INFO    Thread-17 :43099 [upload_job.py:push():143] Uploaded file /tmp/tmpq3m9cv7qwandb/zpn8n83x-diff.patch
+2024-04-18 19:06:25,271 DEBUG   SenderThread:43099 [sender.py:send():334] send: use_artifact
+2024-04-18 19:06:25,833 INFO    Thread-13 :43099 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/output.log
+2024-04-18 19:06:26,026 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:26,027 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:26,694 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:06:27,834 INFO    Thread-13 :43099 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/output.log
+2024-04-18 19:06:28,035 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:28,036 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:30,046 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:30,047 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:31,696 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:06:32,057 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:32,057 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:34,067 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:34,068 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:36,079 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:36,080 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:36,697 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:06:38,090 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:38,091 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:38,534 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:06:38,534 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:06:40,101 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:40,102 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:41,699 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:06:42,112 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:42,113 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:43,537 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:06:44,120 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:44,120 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:46,126 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:46,127 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:46,700 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:06:48,134 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:48,134 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:48,539 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:06:50,144 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:50,144 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:51,705 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:06:52,157 ERROR   gpu       :43099 [interfaces.py:aggregate():146] Failed to serialize metric: division by zero
+2024-04-18 19:06:52,162 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:52,162 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:52,856 INFO    Thread-13 :43099 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/config.yaml
+2024-04-18 19:06:53,542 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:06:54,171 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:54,172 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:56,183 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:56,184 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:56,911 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:06:58,194 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:58,195 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:06:58,544 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:07:00,206 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:00,207 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:01,912 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:07:02,217 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:02,218 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:03,545 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:07:04,229 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:04,229 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:06,239 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:06,240 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:06,914 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:07:08,250 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:08,250 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:08,548 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:07:10,260 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:10,261 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:11,917 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:07:12,270 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:12,270 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:13,550 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:07:14,281 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:14,281 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:16,292 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:16,293 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:16,918 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:07:18,302 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:18,302 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:18,552 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:07:20,310 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:20,310 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:21,919 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:07:21,973 DEBUG   SystemMonitor:43099 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2024-04-18 19:07:21,978 DEBUG   SenderThread:43099 [sender.py:send():334] send: stats
+2024-04-18 19:07:22,315 ERROR   gpu       :43099 [interfaces.py:aggregate():146] Failed to serialize metric: division by zero
+2024-04-18 19:07:22,320 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:22,320 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:23,555 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:07:24,326 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:24,326 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:26,332 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:26,333 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:26,981 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:07:28,343 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:28,344 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:28,557 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:07:30,355 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:30,356 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:31,983 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:07:32,365 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:32,366 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:33,559 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:07:34,376 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:34,377 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:36,388 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:36,389 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:36,985 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:07:38,398 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:38,399 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:38,560 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:07:40,410 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:40,411 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:41,987 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:07:42,422 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:42,422 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:43,562 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:07:44,432 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:44,433 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:46,444 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:46,445 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:46,989 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:07:48,454 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:48,455 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:48,564 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:07:50,464 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:50,465 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:51,979 DEBUG   SenderThread:43099 [sender.py:send():334] send: stats
+2024-04-18 19:07:52,475 ERROR   gpu       :43099 [interfaces.py:aggregate():146] Failed to serialize metric: division by zero
+2024-04-18 19:07:52,480 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:52,480 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:52,981 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:07:53,567 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:07:54,490 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:54,491 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:56,500 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:56,501 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:57,983 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:07:58,511 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:58,512 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:07:58,569 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:08:00,519 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:00,519 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:02,528 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:02,528 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:02,984 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:08:03,572 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:08:04,539 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:04,540 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:06,546 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:06,547 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:07,986 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:08:08,554 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:08,555 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:08,573 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:08:10,564 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:10,565 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:12,575 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:12,575 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:12,988 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:08:13,575 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:08:14,582 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:14,583 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:16,591 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:16,592 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:17,990 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:08:18,577 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:08:18,601 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:18,602 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:20,613 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:20,614 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:21,982 DEBUG   SenderThread:43099 [sender.py:send():334] send: stats
+2024-04-18 19:08:22,629 ERROR   gpu       :43099 [interfaces.py:aggregate():146] Failed to serialize metric: division by zero
+2024-04-18 19:08:22,633 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:22,634 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:23,579 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:08:23,985 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:08:24,642 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:24,643 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:26,649 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:26,649 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:28,581 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:08:28,655 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:28,655 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:28,986 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:08:30,663 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:30,663 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:32,670 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:32,670 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:33,584 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:08:33,988 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:08:34,682 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:34,683 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:36,691 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:36,691 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:38,585 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: keepalive
+2024-04-18 19:08:38,700 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:38,700 ERROR   gpu       :43099 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2024-04-18 19:08:38,990 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:08:39,695 DEBUG   SenderThread:43099 [sender.py:send():334] send: telemetry
+2024-04-18 19:08:39,714 DEBUG   SenderThread:43099 [sender.py:send():334] send: config
+2024-04-18 19:08:39,716 DEBUG   SenderThread:43099 [sender.py:send():334] send: exit
+2024-04-18 19:08:39,716 INFO    SenderThread:43099 [sender.py:send_exit():557] handling exit code: 0
+2024-04-18 19:08:39,716 INFO    SenderThread:43099 [sender.py:send_exit():559] handling runtime: 137
+2024-04-18 19:08:39,717 INFO    SenderThread:43099 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2024-04-18 19:08:39,717 INFO    SenderThread:43099 [sender.py:send_exit():565] send defer
+2024-04-18 19:08:39,717 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:39,717 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 0
+2024-04-18 19:08:39,718 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:39,718 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 0
+2024-04-18 19:08:39,718 INFO    SenderThread:43099 [sender.py:transition_state():585] send defer: 1
+2024-04-18 19:08:39,718 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:39,718 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 1
+2024-04-18 19:08:39,718 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:39,718 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 1
+2024-04-18 19:08:39,718 INFO    SenderThread:43099 [sender.py:transition_state():585] send defer: 2
+2024-04-18 19:08:39,718 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:39,718 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 2
+2024-04-18 19:08:39,718 INFO    HandlerThread:43099 [system_monitor.py:finish():161] Stopping system monitor
+2024-04-18 19:08:39,718 DEBUG   SystemMonitor:43099 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2024-04-18 19:08:39,718 DEBUG   SystemMonitor:43099 [system_monitor.py:_start():141] Publishing last batch of metrics
+2024-04-18 19:08:39,719 INFO    HandlerThread:43099 [interfaces.py:finish():175] Joined cpu
+2024-04-18 19:08:39,719 INFO    HandlerThread:43099 [interfaces.py:finish():175] Joined disk
+2024-04-18 19:08:39,722 ERROR   gpu       :43099 [interfaces.py:aggregate():146] Failed to serialize metric: division by zero
+2024-04-18 19:08:39,722 INFO    HandlerThread:43099 [interfaces.py:finish():175] Joined gpu
+2024-04-18 19:08:39,722 INFO    HandlerThread:43099 [interfaces.py:finish():175] Joined memory
+2024-04-18 19:08:39,723 INFO    HandlerThread:43099 [interfaces.py:finish():175] Joined network
+2024-04-18 19:08:39,723 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:39,723 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 2
+2024-04-18 19:08:39,723 INFO    SenderThread:43099 [sender.py:transition_state():585] send defer: 3
+2024-04-18 19:08:39,723 DEBUG   SenderThread:43099 [sender.py:send():334] send: stats
+2024-04-18 19:08:39,723 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:39,723 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 3
+2024-04-18 19:08:39,723 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:39,723 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 3
+2024-04-18 19:08:39,723 INFO    SenderThread:43099 [sender.py:transition_state():585] send defer: 4
+2024-04-18 19:08:39,723 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:39,723 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 4
+2024-04-18 19:08:39,723 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:39,723 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 4
+2024-04-18 19:08:39,723 INFO    SenderThread:43099 [sender.py:transition_state():585] send defer: 5
+2024-04-18 19:08:39,723 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:39,723 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 5
+2024-04-18 19:08:39,724 DEBUG   SenderThread:43099 [sender.py:send():334] send: summary
+2024-04-18 19:08:39,724 INFO    SenderThread:43099 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2024-04-18 19:08:39,724 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:39,724 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 5
+2024-04-18 19:08:39,724 INFO    SenderThread:43099 [sender.py:transition_state():585] send defer: 6
+2024-04-18 19:08:39,724 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:39,724 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 6
+2024-04-18 19:08:39,724 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:39,724 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 6
+2024-04-18 19:08:39,726 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: status_report
+2024-04-18 19:08:39,937 INFO    Thread-13 :43099 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/wandb-summary.json
+2024-04-18 19:08:39,937 INFO    Thread-13 :43099 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/code/_session_history.ipynb
+2024-04-18 19:08:39,937 INFO    Thread-13 :43099 [dir_watcher.py:_on_file_created():275] file/dir created: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/code
+2024-04-18 19:08:39,993 INFO    SenderThread:43099 [sender.py:transition_state():585] send defer: 7
+2024-04-18 19:08:39,994 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:39,994 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 7
+2024-04-18 19:08:39,994 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:39,994 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 7
+2024-04-18 19:08:40,718 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: poll_exit
+2024-04-18 19:08:40,937 INFO    Thread-13 :43099 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/config.yaml
+2024-04-18 19:08:41,907 INFO    SenderThread:43099 [sender.py:transition_state():585] send defer: 8
+2024-04-18 19:08:41,908 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: poll_exit
+2024-04-18 19:08:41,908 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:41,908 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 8
+2024-04-18 19:08:41,909 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:41,909 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 8
+2024-04-18 19:08:41,910 INFO    SenderThread:43099 [sender.py:transition_state():585] send defer: 9
+2024-04-18 19:08:41,910 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:41,910 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 9
+2024-04-18 19:08:41,911 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:41,911 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 9
+2024-04-18 19:08:41,911 INFO    SenderThread:43099 [dir_watcher.py:finish():362] shutting down directory watcher
+2024-04-18 19:08:41,939 INFO    Thread-13 :43099 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/output.log
+2024-04-18 19:08:41,940 INFO    SenderThread:43099 [dir_watcher.py:finish():392] scan: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files
+2024-04-18 19:08:41,941 INFO    SenderThread:43099 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/diff.patch diff.patch
+2024-04-18 19:08:41,941 INFO    SenderThread:43099 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/conda-environment.yaml conda-environment.yaml
+2024-04-18 19:08:41,941 INFO    SenderThread:43099 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/requirements.txt requirements.txt
+2024-04-18 19:08:41,942 INFO    SenderThread:43099 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/wandb-summary.json wandb-summary.json
+2024-04-18 19:08:41,948 INFO    SenderThread:43099 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/wandb-metadata.json wandb-metadata.json
+2024-04-18 19:08:41,949 INFO    SenderThread:43099 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/output.log output.log
+2024-04-18 19:08:41,949 INFO    SenderThread:43099 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/config.yaml config.yaml
+2024-04-18 19:08:41,952 INFO    SenderThread:43099 [dir_watcher.py:finish():406] scan save: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/code/_session_history.ipynb code/_session_history.ipynb
+2024-04-18 19:08:41,952 INFO    SenderThread:43099 [sender.py:transition_state():585] send defer: 10
+2024-04-18 19:08:41,953 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:41,953 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 10
+2024-04-18 19:08:41,955 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:41,955 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 10
+2024-04-18 19:08:41,955 INFO    SenderThread:43099 [file_pusher.py:finish():160] shutting down file pusher
+2024-04-18 19:08:42,429 INFO    Thread-20 :43099 [upload_job.py:push():143] Uploaded file /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/wandb-summary.json
+2024-04-18 19:08:42,486 INFO    Thread-23 :43099 [upload_job.py:push():143] Uploaded file /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/code/_session_history.ipynb
+2024-04-18 19:08:42,490 INFO    Thread-19 :43099 [upload_job.py:push():143] Uploaded file /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/requirements.txt
+2024-04-18 19:08:42,495 INFO    Thread-22 :43099 [upload_job.py:push():143] Uploaded file /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/config.yaml
+2024-04-18 19:08:42,521 INFO    Thread-18 :43099 [upload_job.py:push():143] Uploaded file /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/conda-environment.yaml
+2024-04-18 19:08:42,555 INFO    Thread-21 :43099 [upload_job.py:push():143] Uploaded file /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/files/output.log
+2024-04-18 19:08:42,757 INFO    Thread-12 :43099 [sender.py:transition_state():585] send defer: 11
+2024-04-18 19:08:42,758 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:42,758 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 11
+2024-04-18 19:08:42,759 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:42,759 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 11
+2024-04-18 19:08:42,760 INFO    SenderThread:43099 [file_pusher.py:join():165] waiting for file pusher
+2024-04-18 19:08:42,760 INFO    SenderThread:43099 [sender.py:transition_state():585] send defer: 12
+2024-04-18 19:08:42,760 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:42,760 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 12
+2024-04-18 19:08:42,761 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:42,761 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 12
+2024-04-18 19:08:42,978 INFO    SenderThread:43099 [sender.py:transition_state():585] send defer: 13
+2024-04-18 19:08:42,979 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:42,980 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 13
+2024-04-18 19:08:42,982 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:42,982 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 13
+2024-04-18 19:08:42,983 INFO    SenderThread:43099 [sender.py:transition_state():585] send defer: 14
+2024-04-18 19:08:42,983 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: defer
+2024-04-18 19:08:42,984 INFO    HandlerThread:43099 [handler.py:handle_request_defer():170] handle defer: 14
+2024-04-18 19:08:42,985 DEBUG   SenderThread:43099 [sender.py:send():334] send: final
+2024-04-18 19:08:42,986 DEBUG   SenderThread:43099 [sender.py:send():334] send: footer
+2024-04-18 19:08:42,986 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: defer
+2024-04-18 19:08:42,986 INFO    SenderThread:43099 [sender.py:send_request_defer():581] handle sender defer: 14
+2024-04-18 19:08:42,988 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: poll_exit
+2024-04-18 19:08:42,988 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: server_info
+2024-04-18 19:08:42,988 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: get_summary
+2024-04-18 19:08:42,989 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: sampled_history
+2024-04-18 19:08:42,989 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: poll_exit
+2024-04-18 19:08:42,990 DEBUG   SenderThread:43099 [sender.py:send_request():361] send_request: server_info
+2024-04-18 19:08:43,327 DEBUG   HandlerThread:43099 [handler.py:handle_request():144] handle_request: shutdown
+2024-04-18 19:08:43,327 INFO    HandlerThread:43099 [handler.py:finish():841] shutting down handler
+2024-04-18 19:08:43,990 INFO    WriterThread:43099 [datastore.py:close():299] close: /home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/src/eda/wandb/run-20240418_190621-6uhejpra/run-6uhejpra.wandb
+2024-04-18 19:08:44,326 INFO    SenderThread:43099 [sender.py:finish():1491] shutting down sender
+2024-04-18 19:08:44,326 INFO    SenderThread:43099 [file_pusher.py:finish():160] shutting down file pusher
+2024-04-18 19:08:44,327 INFO    SenderThread:43099 [file_pusher.py:join():165] waiting for file pusher

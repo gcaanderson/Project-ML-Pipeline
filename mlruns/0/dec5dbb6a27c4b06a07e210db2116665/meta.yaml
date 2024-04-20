@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/dec5dbb6a27c4b06a07e210db2116665/artifacts
+end_time: 1713568228549
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dec5dbb6a27c4b06a07e210db2116665
+run_name: bold-quail-176
+run_uuid: dec5dbb6a27c4b06a07e210db2116665
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713568212969
+status: 3
+tags: []
+user_id: gcaanderson

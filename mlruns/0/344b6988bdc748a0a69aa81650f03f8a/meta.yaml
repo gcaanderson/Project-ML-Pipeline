@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/344b6988bdc748a0a69aa81650f03f8a/artifacts
+end_time: 1713483765540
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 344b6988bdc748a0a69aa81650f03f8a
+run_name: amusing-gnat-423
+run_uuid: 344b6988bdc748a0a69aa81650f03f8a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713483764831
+status: 4
+tags: []
+user_id: gcaanderson

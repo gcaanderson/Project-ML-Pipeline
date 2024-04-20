@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/7f5ff897f1fd45b88fe041008fd1d36e/artifacts
+end_time: 1713567652674
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7f5ff897f1fd45b88fe041008fd1d36e
+run_name: marvelous-horse-349
+run_uuid: 7f5ff897f1fd45b88fe041008fd1d36e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713567651306
+status: 4
+tags: []
+user_id: gcaanderson

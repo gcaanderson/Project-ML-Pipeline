@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/eba001df153548bdb1778bda7d0c4e1c/artifacts
+end_time: 1713484237157
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eba001df153548bdb1778bda7d0c4e1c
+run_name: respected-dog-5
+run_uuid: eba001df153548bdb1778bda7d0c4e1c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713484167959
+status: 3
+tags: []
+user_id: gcaanderson

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/d835645fad2e4f0db446b8aa12183cba/artifacts
+end_time: 1713567338392
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d835645fad2e4f0db446b8aa12183cba
+run_name: abundant-hog-145
+run_uuid: d835645fad2e4f0db446b8aa12183cba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713567337037
+status: 4
+tags: []
+user_id: gcaanderson

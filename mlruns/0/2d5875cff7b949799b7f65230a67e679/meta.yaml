@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/2d5875cff7b949799b7f65230a67e679/artifacts
+end_time: 1713483789553
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2d5875cff7b949799b7f65230a67e679
+run_name: amazing-tern-631
+run_uuid: 2d5875cff7b949799b7f65230a67e679
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713483788854
+status: 4
+tags: []
+user_id: gcaanderson

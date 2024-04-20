@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/105fcdf570a54e5bb6fb3f8a6581a9ed/artifacts
+end_time: 1713566592346
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 105fcdf570a54e5bb6fb3f8a6581a9ed
+run_name: amazing-jay-408
+run_uuid: 105fcdf570a54e5bb6fb3f8a6581a9ed
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713566554151
+status: 3
+tags: []
+user_id: gcaanderson

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/675e3b23883e4de299f753099240f87f/artifacts
+end_time: 1713483542589
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 675e3b23883e4de299f753099240f87f
+run_name: carefree-stork-885
+run_uuid: 675e3b23883e4de299f753099240f87f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713483541854
+status: 4
+tags: []
+user_id: gcaanderson

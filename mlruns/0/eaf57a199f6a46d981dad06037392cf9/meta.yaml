@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/eaf57a199f6a46d981dad06037392cf9/artifacts
+end_time: 1713568276749
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eaf57a199f6a46d981dad06037392cf9
+run_name: gifted-perch-279
+run_uuid: eaf57a199f6a46d981dad06037392cf9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713568275398
+status: 4
+tags: []
+user_id: gcaanderson

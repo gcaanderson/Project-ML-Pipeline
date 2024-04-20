@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/c58ca5af59134b7c842b42333a78c49e/artifacts
+end_time: 1713483681661
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c58ca5af59134b7c842b42333a78c49e
+run_name: luminous-eel-975
+run_uuid: c58ca5af59134b7c842b42333a78c49e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713483680955
+status: 4
+tags: []
+user_id: gcaanderson

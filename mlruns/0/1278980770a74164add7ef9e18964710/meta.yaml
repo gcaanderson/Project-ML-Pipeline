@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/1278980770a74164add7ef9e18964710/artifacts
+end_time: 1713567806556
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1278980770a74164add7ef9e18964710
+run_name: rare-mole-71
+run_uuid: 1278980770a74164add7ef9e18964710
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713567805207
+status: 4
+tags: []
+user_id: gcaanderson

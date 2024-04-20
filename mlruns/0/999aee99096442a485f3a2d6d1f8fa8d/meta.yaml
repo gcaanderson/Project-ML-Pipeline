@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/999aee99096442a485f3a2d6d1f8fa8d/artifacts
+end_time: 1713483610212
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 999aee99096442a485f3a2d6d1f8fa8d
+run_name: kindly-vole-184
+run_uuid: 999aee99096442a485f3a2d6d1f8fa8d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713483609510
+status: 4
+tags: []
+user_id: gcaanderson

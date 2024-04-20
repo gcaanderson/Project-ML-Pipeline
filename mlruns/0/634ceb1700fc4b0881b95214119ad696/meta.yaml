@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/634ceb1700fc4b0881b95214119ad696/artifacts
+end_time: 1713483489262
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 634ceb1700fc4b0881b95214119ad696
+run_name: shivering-skink-83
+run_uuid: 634ceb1700fc4b0881b95214119ad696
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713483488541
+status: 4
+tags: []
+user_id: gcaanderson

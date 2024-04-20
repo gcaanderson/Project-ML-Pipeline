@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/5081da03c20f4480b3c10fd4dd3c0339/artifacts
+end_time: 1713482985964
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5081da03c20f4480b3c10fd4dd3c0339
+run_name: agreeable-jay-582
+run_uuid: 5081da03c20f4480b3c10fd4dd3c0339
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713482985155
+status: 4
+tags: []
+user_id: gcaanderson

@@ -1,0 +1,677 @@
+diff --git a/conda.yml b/conda.yml
+index 2975088..643e2b4 100644
+--- a/conda.yml
++++ b/conda.yml
+@@ -7,6 +7,6 @@ dependencies:
+   - pyyaml=5.3.1
+   - hydra-core=1.0.6
+   - pip=20.3.3
+-  - numpy=1.23.5
+   - pip:
+-      - wandb==0.16.0
+\ No newline at end of file
++      - wandb==0.13.9
++      - databricks-cli==0.8.7
+\ No newline at end of file
+diff --git a/environment.yml b/environment.yml
+index 4701fac..da28ba1 100644
+--- a/environment.yml
++++ b/environment.yml
+@@ -13,6 +13,5 @@ dependencies:
+   - pandas=1.2.3
+   - git=2.30.2
+   - pip=20.3.3
+-  - numpy=1.23.5
+   - pip:
+-      - wandb==0.16.0
+\ No newline at end of file
++      - wandb==0.13.9
+\ No newline at end of file
+diff --git a/main.py b/main.py
+index f0d4dd7..5dc4e4c 100644
+--- a/main.py
++++ b/main.py
+@@ -51,69 +51,69 @@ def go(config: DictConfig):
+ 
+         if "basic_cleaning" in active_steps:
+             ##################
+-            _ = mlflow.run(
+-                os.path.join(root_path, "basic_cleaning"),
+-                "main",
+-                parameters = {
+-                    "input_artifact": "raw_data.csv:latest",
+-                    "output_artifact": "clean_data.csv"
+-                },
+-            )
++           # _ = mlflow.run(
++           #     os.path.join(root_path, "basic_cleaning"),
++           #     "main",
++           #     parameters = {
++           #         "input_artifact": "raw_data.csv:latest",
++           #         "output_artifact": "clean_data.csv"
++           #     },
++           # )
+             ##################
+             pass
+ 
+         if "data_check" in active_steps:
+             ##################
+-            _ = mlflow.run(
+-                os.path.join(root_path, "data_check"), 
+-                "main", 
+-                parameters = {
+-                    "reference_artifact": config["data"]["reference_dataset"], 
+-                    "sample_artifact": "clean_data.csv:latest", 
+-                    "ks_alpha": config["data"]["ks_alpha"]
+-                },
+-            )
++           # _ = mlflow.run(
++           #     os.path.join(root_path, "data_check"), 
++           #     "main", 
++           #     parameters = {
++           #         "reference_artifact": config["data"]["reference_dataset"], 
++           #         "sample_artifact": "clean_data.csv:latest", 
++           #         "ks_alpha": config["data"]["ks_alpha"]
++           #     },
++           # )
+             ##################
+             pass
+ 
+         if "data_split" in active_steps:
+             ##################
+-            _ = mlflow.run(
+-                os.path.join(root_path, "segregate"),
+-                "main",
+-                parameters={
+-                    "input_artifact": "preprocessed_data.csv:latest",
+-                    "artifact_root": "data",
+-                    "artifact_type": "segregated_data",
+-                    "test_size": config["data"]["test_size"],
+-                    "stratify": config["data"]["stratify"]
+-                },
+-            )
++            #_ = mlflow.run(
++            #    os.path.join(root_path, "segregate"),
++            #    "main",
++            #    parameters={
++            #        "input_artifact": "preprocessed_data.csv:latest",
++            #        "artifact_root": "data",
++            #        "artifact_type": "segregated_data",
++            #        "test_size": config["data"]["test_size"],
++            #        "stratify": config["data"]["stratify"]
++            #    },
++            #)
+             ##################
+             pass
+ 
+         if "train_random_forest" in active_steps:
+ 
+             # NOTE: we need to serialize the random forest configuration into JSON
+-            rf_config = os.path.abspath("rf_config.json")
+-            with open(rf_config, "w+") as fp:
+-                json.dump(dict(config["modeling"]["random_forest"].items()), fp)  # DO NOT TOUCH
++          #  rf_config = os.path.abspath("rf_config.json")
++           # with open(rf_config, "w+") as fp:
++           #     json.dump(dict(config["modeling"]["random_forest"].items()), fp)  # DO NOT TOUCH
+ 
+             # NOTE: use the rf_config we just created as the rf_config parameter for the train_random_forest step
+ 
+             ##################
+-            _ = mlflow.run(
+-                os.path.join(root_path, "random_forest"),
+-                "main",
+-                parameters={
+-                    "train_data": "data_train.csv:latest",
+-                    "rf_config": rf_config,
+-                    "export_artifact": config["random_forest_pipeline"]["export_artifact"],
+-                    "random_seed": config["main"]["random_seed"],
+-                    "val_size": config["data"]["test_size"],
+-                    "stratify": config["data"]["stratify"]
+-                },
+-            )
++           # _ = mlflow.run(
++           #     os.path.join(root_path, "random_forest"),
++           #     "main",
++           #     parameters={
++           #         "train_data": "data_train.csv:latest",
++           #         "rf_config": rf_config,
++           #         "export_artifact": config["random_forest_pipeline"]["export_artifact"],
++           #         "random_seed": config["main"]["random_seed"],
++           #         "val_size": config["data"]["test_size"],
++           #         "stratify": config["data"]["stratify"]
++           #     },
++           # )
+             ##################
+ 
+             pass
+@@ -121,14 +121,14 @@ def go(config: DictConfig):
+         if "test_regression_model" in active_steps:
+ 
+             ##################
+-            _ = mlflow.run(
+-                os.path.join(root_path, "evaluate"),
+-                "main",
+-                parameters={
+-                    "model_export": f"{config['random_forest_pipeline']['export_artifact']}:latest",
+-                    "test_data": "data_test.csv:latest"
+-                },
+-            )
++          #  _ = mlflow.run(
++          #      os.path.join(root_path, "evaluate"),
++          #      "main",
++          #      parameters={
++          #          "model_export": f"{config['random_forest_pipeline']['export_artifact']}:latest",
++          #          "test_data": "data_test.csv:latest"
++          #      },
++          #  )
+             ##################
+ 
+             pass
+diff --git a/src/basic_cleaning/conda.yml b/src/basic_cleaning/conda.yml
+index 3910060..f35e98c 100644
+--- a/src/basic_cleaning/conda.yml
++++ b/src/basic_cleaning/conda.yml
+@@ -6,4 +6,4 @@ dependencies:
+   - pip=20.3.3
+   - pandas=1.2.3
+   - pip:
+-      - wandb==0.16.0
++      - wandb==0.13.9
+diff --git a/src/data_check/conda.yml b/src/data_check/conda.yml
+index ea89918..aa581fb 100644
+--- a/src/data_check/conda.yml
++++ b/src/data_check/conda.yml
+@@ -8,4 +8,4 @@ dependencies:
+   - scipy=1.5.2
+   - pip=20.3.3
+   - pip:
+-      - wandb==0.16.0
++      - wandb==0.13.9
+diff --git a/src/eda/eda.ipynb b/src/eda/eda.ipynb
+index 06abc38..dd83006 100644
+--- a/src/eda/eda.ipynb
++++ b/src/eda/eda.ipynb
+@@ -2,8 +2,8 @@
+  "cells": [
+   {
+    "cell_type": "code",
+-   "execution_count": 6,
+-   "id": "1f72a955",
++   "execution_count": null,
++   "id": "38c0e967",
+    "metadata": {
+     "scrolled": true,
+     "tags": []
+@@ -13,72 +13,94 @@
+      "name": "stdout",
+      "output_type": "stream",
+      "text": [
+-      "Requirement already satisfied: wandb==0.13.9 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (0.13.9)\n",
+-      "Requirement already satisfied: setproctitle in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from wandb==0.13.9) (1.3.2)\n",
+-      "Requirement already satisfied: protobuf!=4.21.0,<5,>=3.19.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from wandb==0.13.9) (4.21.12)\n",
+-      "Requirement already satisfied: docker-pycreds>=0.4.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from wandb==0.13.9) (0.4.0)\n",
+-      "Requirement already satisfied: setuptools in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from wandb==0.13.9) (59.8.0)\n",
+-      "Requirement already satisfied: pathtools in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from wandb==0.13.9) (0.1.2)\n",
+-      "Requirement already satisfied: Click!=8.0.0,>=7.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from wandb==0.13.9) (8.1.3)\n",
+-      "Requirement already satisfied: GitPython>=1.0.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from wandb==0.13.9) (3.1.31)\n",
+-      "Requirement already satisfied: appdirs>=1.4.3 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from wandb==0.13.9) (1.4.4)\n",
+-      "Requirement already satisfied: requests<3,>=2.0.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from wandb==0.13.9) (2.28.2)\n",
+-      "Requirement already satisfied: typing-extensions in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from wandb==0.13.9) (4.5.0)\n",
+-      "Requirement already satisfied: PyYAML in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from wandb==0.13.9) (6.0)\n",
+-      "Requirement already satisfied: sentry-sdk>=1.0.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from wandb==0.13.9) (1.19.1)\n",
+-      "Requirement already satisfied: psutil>=5.0.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from wandb==0.13.9) (5.9.4)\n",
+-      "Requirement already satisfied: six>=1.4.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from docker-pycreds>=0.4.0->wandb==0.13.9) (1.16.0)\n",
+-      "Requirement already satisfied: gitdb<5,>=4.0.1 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from GitPython>=1.0.0->wandb==0.13.9) (4.0.10)\n",
+-      "Requirement already satisfied: smmap<6,>=3.0.1 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from gitdb<5,>=4.0.1->GitPython>=1.0.0->wandb==0.13.9) (3.0.5)\n",
+-      "Requirement already satisfied: idna<4,>=2.5 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from requests<3,>=2.0.0->wandb==0.13.9) (3.4)\n",
+-      "Requirement already satisfied: urllib3<1.27,>=1.21.1 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from requests<3,>=2.0.0->wandb==0.13.9) (1.26.15)\n",
+-      "Requirement already satisfied: charset-normalizer<4,>=2 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from requests<3,>=2.0.0->wandb==0.13.9) (3.1.0)\n",
+-      "Requirement already satisfied: certifi>=2017.4.17 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from requests<3,>=2.0.0->wandb==0.13.9) (2022.12.7)\n",
+-      "Requirement already satisfied: pandas-profiling==3.6.2 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (3.6.2)\n",
+-      "Requirement already satisfied: multimethod<1.10,>=1.4 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (1.9.1)\n",
+-      "Requirement already satisfied: jinja2<3.2,>=2.11.1 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (2.11.3)\n",
+-      "Requirement already satisfied: matplotlib<3.7,>=3.2 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (3.6.2)\n",
+-      "Requirement already satisfied: scipy<1.10,>=1.4.1 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (1.9.3)\n",
+-      "Requirement already satisfied: htmlmin==0.1.12 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (0.1.12)\n",
+-      "Requirement already satisfied: requests<2.29,>=2.24.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (2.28.2)\n",
+-      "Requirement already satisfied: numpy<1.24,>=1.16.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (1.23.5)\n",
+-      "Requirement already satisfied: seaborn<0.13,>=0.10.1 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (0.11.1)\n",
+-      "Requirement already satisfied: statsmodels<0.14,>=0.13.2 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (0.13.5)\n",
+-      "Requirement already satisfied: pydantic<1.11,>=1.8.1 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (1.10.7)\n",
+-      "Requirement already satisfied: pandas!=1.4.0,<1.6,>1.1 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (1.2.3)\n",
+-      "Requirement already satisfied: phik<0.13,>=0.11.1 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (0.12.3)\n",
+-      "Requirement already satisfied: typeguard<2.14,>=2.13.2 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (2.13.3)\n",
+-      "Requirement already satisfied: PyYAML<6.1,>=5.0.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (6.0)\n",
+-      "Requirement already satisfied: visions[type_image_path]==0.7.5 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (0.7.5)\n",
+-      "Requirement already satisfied: tqdm<4.65,>=4.48.2 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (4.64.1)\n",
+-      "Requirement already satisfied: attrs>=19.3.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from visions[type_image_path]==0.7.5->pandas-profiling==3.6.2) (22.2.0)\n",
+-      "Requirement already satisfied: networkx>=2.4 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from visions[type_image_path]==0.7.5->pandas-profiling==3.6.2) (3.1)\n",
+-      "Requirement already satisfied: tangled-up-in-unicode>=0.0.4 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from visions[type_image_path]==0.7.5->pandas-profiling==3.6.2) (0.2.0)\n",
+-      "Requirement already satisfied: Pillow in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from visions[type_image_path]==0.7.5->pandas-profiling==3.6.2) (9.5.0)\n",
+-      "Requirement already satisfied: imagehash in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from visions[type_image_path]==0.7.5->pandas-profiling==3.6.2) (4.3.1)\n",
+-      "Requirement already satisfied: MarkupSafe>=0.23 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from jinja2<3.2,>=2.11.1->pandas-profiling==3.6.2) (1.1.1)\n",
+-      "Requirement already satisfied: pyparsing>=2.2.1 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (3.0.9)\n",
+-      "Requirement already satisfied: python-dateutil>=2.7 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (2.8.2)\n",
+-      "Requirement already satisfied: contourpy>=1.0.1 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (1.0.7)\n",
+-      "Requirement already satisfied: packaging>=20.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (22.0)\n",
+-      "Requirement already satisfied: kiwisolver>=1.0.1 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (1.4.4)\n",
+-      "Requirement already satisfied: fonttools>=4.22.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (4.39.3)\n",
+-      "Requirement already satisfied: cycler>=0.10 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (0.11.0)\n",
+-      "Requirement already satisfied: pytz>=2017.3 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas!=1.4.0,<1.6,>1.1->pandas-profiling==3.6.2) (2022.7.1)\n",
+-      "Requirement already satisfied: joblib>=0.14.1 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from phik<0.13,>=0.11.1->pandas-profiling==3.6.2) (1.2.0)\n",
+-      "Requirement already satisfied: typing-extensions>=4.2.0 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pydantic<1.11,>=1.8.1->pandas-profiling==3.6.2) (4.5.0)\n",
+-      "Requirement already satisfied: six>=1.5 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from python-dateutil>=2.7->matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (1.16.0)\n",
+-      "Requirement already satisfied: certifi>=2017.4.17 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from requests<2.29,>=2.24.0->pandas-profiling==3.6.2) (2022.12.7)\n",
+-      "Requirement already satisfied: urllib3<1.27,>=1.21.1 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from requests<2.29,>=2.24.0->pandas-profiling==3.6.2) (1.26.15)\n",
+-      "Requirement already satisfied: charset-normalizer<4,>=2 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from requests<2.29,>=2.24.0->pandas-profiling==3.6.2) (3.1.0)\n",
+-      "Requirement already satisfied: idna<4,>=2.5 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from requests<2.29,>=2.24.0->pandas-profiling==3.6.2) (3.4)\n",
+-      "Requirement already satisfied: patsy>=0.5.2 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from statsmodels<0.14,>=0.13.2->pandas-profiling==3.6.2) (0.5.3)\n",
+-      "Requirement already satisfied: PyWavelets in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from imagehash->visions[type_image_path]==0.7.5->pandas-profiling==3.6.2) (1.4.1)\n",
+-      "Requirement already satisfied: pandas==1.2.3 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (1.2.3)\n",
+-      "Requirement already satisfied: python-dateutil>=2.7.3 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas==1.2.3) (2.8.2)\n",
+-      "Requirement already satisfied: pytz>=2017.3 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas==1.2.3) (2022.7.1)\n",
+-      "Requirement already satisfied: numpy>=1.16.5 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from pandas==1.2.3) (1.23.5)\n",
+-      "Requirement already satisfied: six>=1.5 in /opt/anaconda3/envs/nyc_airbnb_dev/lib/python3.9/site-packages (from python-dateutil>=2.7.3->pandas==1.2.3) (1.16.0)\n"
++      "Collecting wandb==0.13.9\n",
++      "  Using cached wandb-0.13.9-py2.py3-none-any.whl (2.0 MB)\n",
++      "Requirement already satisfied: psutil>=5.0.0 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from wandb==0.13.9) (5.9.8)\n",
++      "Requirement already satisfied: sentry-sdk>=1.0.0 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from wandb==0.13.9) (1.43.0)\n",
++      "Requirement already satisfied: docker-pycreds>=0.4.0 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from wandb==0.13.9) (0.4.0)\n",
++      "Requirement already satisfied: GitPython>=1.0.0 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from wandb==0.13.9) (3.1.42)\n",
++      "Requirement already satisfied: requests<3,>=2.0.0 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from wandb==0.13.9) (2.31.0)\n",
++      "Requirement already satisfied: pathtools in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from wandb==0.13.9) (0.1.2)\n",
++      "Requirement already satisfied: setproctitle in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from wandb==0.13.9) (1.3.3)\n",
++      "Requirement already satisfied: protobuf!=4.21.0,<5,>=3.15.0 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from wandb==0.13.9) (4.21.12)\n",
++      "Requirement already satisfied: appdirs>=1.4.3 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from wandb==0.13.9) (1.4.4)\n",
++      "Requirement already satisfied: typing-extensions in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from wandb==0.13.9) (4.10.0)\n",
++      "Requirement already satisfied: PyYAML in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from wandb==0.13.9) (6.0.1)\n",
++      "Requirement already satisfied: setuptools in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from wandb==0.13.9) (59.8.0)\n",
++      "Requirement already satisfied: Click!=8.0.0,>=7.0 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from wandb==0.13.9) (8.1.7)\n",
++      "Requirement already satisfied: six>=1.4.0 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from docker-pycreds>=0.4.0->wandb==0.13.9) (1.16.0)\n",
++      "Requirement already satisfied: gitdb<5,>=4.0.1 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from GitPython>=1.0.0->wandb==0.13.9) (4.0.11)\n",
++      "Requirement already satisfied: smmap<6,>=3.0.1 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from gitdb<5,>=4.0.1->GitPython>=1.0.0->wandb==0.13.9) (5.0.0)\n",
++      "Requirement already satisfied: charset-normalizer<4,>=2 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from requests<3,>=2.0.0->wandb==0.13.9) (3.3.2)\n",
++      "Requirement already satisfied: urllib3<3,>=1.21.1 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from requests<3,>=2.0.0->wandb==0.13.9) (2.2.1)\n",
++      "Requirement already satisfied: certifi>=2017.4.17 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from requests<3,>=2.0.0->wandb==0.13.9) (2024.2.2)\n",
++      "Requirement already satisfied: idna<4,>=2.5 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from requests<3,>=2.0.0->wandb==0.13.9) (3.6)\n",
++      "Installing collected packages: wandb\n",
++      "  Attempting uninstall: wandb\n",
++      "    Found existing installation: wandb 0.16.0\n",
++      "    Uninstalling wandb-0.16.0:\n",
++      "      Successfully uninstalled wandb-0.16.0\n",
++      "Successfully installed wandb-0.13.9\n",
++      "Collecting pandas-profiling==3.6.2\n",
++      "  Downloading pandas_profiling-3.6.2-py2.py3-none-any.whl (328 kB)\n",
++      "\u001b[K     |████████████████████████████████| 328 kB 1.2 MB/s eta 0:00:01\n",
++      "\u001b[?25hRequirement already satisfied: PyYAML<6.1,>=5.0.0 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (6.0.1)\n",
++      "Requirement already satisfied: pandas!=1.4.0,<1.6,>1.1 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (1.2.3)\n",
++      "Requirement already satisfied: jinja2<3.2,>=2.11.1 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (2.11.3)\n",
++      "Requirement already satisfied: matplotlib<3.7,>=3.2 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from pandas-profiling==3.6.2) (3.6.2)\n",
++      "Collecting htmlmin==0.1.12\n",
++      "  Downloading htmlmin-0.1.12.tar.gz (19 kB)\n",
++      "Collecting visions[type_image_path]==0.7.5\n",
++      "  Downloading visions-0.7.5-py3-none-any.whl (102 kB)\n",
++      "\u001b[K     |████████████████████████████████| 102 kB 4.9 MB/s eta 0:00:01\n",
++      "\u001b[?25hRequirement already satisfied: attrs>=19.3.0 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from visions[type_image_path]==0.7.5->pandas-profiling==3.6.2) (23.2.0)\n",
++      "Requirement already satisfied: Pillow in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from visions[type_image_path]==0.7.5->pandas-profiling==3.6.2) (9.4.0)\n",
++      "Requirement already satisfied: MarkupSafe>=0.23 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from jinja2<3.2,>=2.11.1->pandas-profiling==3.6.2) (1.1.1)\n",
++      "Requirement already satisfied: python-dateutil>=2.7 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (2.9.0)\n",
++      "Requirement already satisfied: kiwisolver>=1.0.1 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (1.4.5)\n",
++      "Requirement already satisfied: packaging>=20.0 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (22.0)\n",
++      "Requirement already satisfied: fonttools>=4.22.0 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (4.50.0)\n",
++      "Requirement already satisfied: cycler>=0.10 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (0.12.1)\n",
++      "Requirement already satisfied: contourpy>=1.0.1 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (1.2.0)\n",
++      "Requirement already satisfied: pyparsing>=2.2.1 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (3.1.2)\n",
++      "Collecting multimethod<1.10,>=1.4\n",
++      "  Downloading multimethod-1.9.1-py3-none-any.whl (10 kB)\n",
++      "Collecting networkx>=2.4\n",
++      "  Downloading networkx-3.2.1-py3-none-any.whl (1.6 MB)\n",
++      "\u001b[K     |████████████████████████████████| 1.6 MB 4.9 MB/s eta 0:00:01\n",
++      "\u001b[?25hCollecting numpy<1.24,>=1.16.0\n",
++      "  Using cached numpy-1.23.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)\n",
++      "Requirement already satisfied: pytz>=2017.3 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from pandas!=1.4.0,<1.6,>1.1->pandas-profiling==3.6.2) (2022.7.1)\n",
++      "Collecting phik<0.13,>=0.11.1\n",
++      "  Downloading phik-0.12.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (686 kB)\n",
++      "\u001b[K     |████████████████████████████████| 686 kB 2.1 MB/s eta 0:00:01\n",
++      "\u001b[?25hRequirement already satisfied: joblib>=0.14.1 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from phik<0.13,>=0.11.1->pandas-profiling==3.6.2) (1.3.2)\n",
++      "Collecting pydantic<1.11,>=1.8.1\n",
++      "  Downloading pydantic-1.10.15-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)\n",
++      "\u001b[K     |████████████████████████████████| 3.2 MB 563 kB/s eta 0:00:01\n",
++      "\u001b[?25hRequirement already satisfied: typing-extensions>=4.2.0 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from pydantic<1.11,>=1.8.1->pandas-profiling==3.6.2) (4.10.0)\n",
++      "Requirement already satisfied: six>=1.5 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from python-dateutil>=2.7->matplotlib<3.7,>=3.2->pandas-profiling==3.6.2) (1.16.0)\n",
++      "Collecting requests<2.29,>=2.24.0\n",
++      "  Downloading requests-2.28.2-py3-none-any.whl (62 kB)\n",
++      "\u001b[K     |████████████████████████████████| 62 kB 530 kB/s eta 0:00:01\n",
++      "\u001b[?25hRequirement already satisfied: certifi>=2017.4.17 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from requests<2.29,>=2.24.0->pandas-profiling==3.6.2) (2024.2.2)\n",
++      "Requirement already satisfied: charset-normalizer<4,>=2 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from requests<2.29,>=2.24.0->pandas-profiling==3.6.2) (3.3.2)\n",
++      "Requirement already satisfied: idna<4,>=2.5 in /home/gcaanderson/miniconda3/envs/mlops/lib/python3.9/site-packages (from requests<2.29,>=2.24.0->pandas-profiling==3.6.2) (3.6)\n",
++      "Collecting scipy<1.10,>=1.4.1\n",
++      "  Downloading scipy-1.9.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (33.8 MB)\n",
++      "\u001b[K     |████████████████████████████████| 33.8 MB 800 kB/s eta 0:00:01\n",
++      "\u001b[?25hCollecting seaborn<0.13,>=0.10.1\n",
++      "  Downloading seaborn-0.12.2-py3-none-any.whl (293 kB)\n",
++      "\u001b[K     |████████████████████████████████| 293 kB 433 kB/s eta 0:00:01\n",
++      "\u001b[?25hCollecting statsmodels<0.14,>=0.13.2\n",
++      "  Downloading statsmodels-0.13.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (9.9 MB)\n",
++      "\u001b[K     |████████████████████████████████| 9.9 MB 421 kB/s eta 0:00:01\n",
++      "\u001b[?25hCollecting patsy>=0.5.2\n",
++      "  Downloading patsy-0.5.6-py2.py3-none-any.whl (233 kB)\n",
++      "\u001b[K     |████████████████████████████████| 233 kB 189 kB/s eta 0:00:01\n",
++      "\u001b[?25hCollecting tangled-up-in-unicode>=0.0.4\n",
++      "  Downloading tangled_up_in_unicode-0.2.0-py3-none-any.whl (4.7 MB)\n",
++      "\u001b[K     |████████▏                       | 1.2 MB 213 kB/s eta 0:00:17"
+      ]
+     }
+    ],
+@@ -90,7 +112,7 @@
+   },
+   {
+    "cell_type": "markdown",
+-   "id": "54c4f98a",
++   "id": "a900ec85",
+    "metadata": {},
+    "source": [
+     "1. Fetch the artifact we just created (sample.csv) from W&B and read it with pandas:"
+@@ -98,172 +120,10 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 7,
+-   "id": "eed98c34",
++   "execution_count": null,
++   "id": "5c6e7828",
+    "metadata": {},
+-   "outputs": [
+-    {
+-     "data": {
+-      "text/html": [
+-       "Finishing last run (ID:v3d3q3rf) before initializing another..."
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Waiting for W&B process to finish... <strong style=\"color:green\">(success).</strong>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "a37b04273ead4a168e477c0394de3fcf",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "VBox(children=(Label(value='0.043 MB of 0.043 MB uploaded (0.000 MB deduped)\\r'), FloatProgress(value=1.0, max…"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       " View run <strong style=\"color:#cdcd00\">visionary-lake-13</strong> at: <a href=\"https://wandb.ai/annyang1963/nyc_airbnb/runs/v3d3q3rf\" target=\"_blank\">https://wandb.ai/annyang1963/nyc_airbnb/runs/v3d3q3rf</a><br/>Synced 7 W&B file(s), 0 media file(s), 0 artifact file(s) and 1 other file(s)"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Find logs at: <code>./wandb/run-20230412_183324-v3d3q3rf/logs</code>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Successfully finished last run (ID:v3d3q3rf). Initializing new run:<br/>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "application/vnd.jupyter.widget-view+json": {
+-       "model_id": "110e5eb88c9f4f9bada3b547c8cd62eb",
+-       "version_major": 2,
+-       "version_minor": 0
+-      },
+-      "text/plain": [
+-       "VBox(children=(Label(value='Waiting for wandb.init()...\\r'), FloatProgress(value=0.016671707533333326, max=1.0…"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "wandb version 0.14.2 is available!  To upgrade, please run:\n",
+-       " $ pip install wandb --upgrade"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Tracking run with wandb version 0.13.9"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Run data is saved locally in <code>/Users/hyang/Huimin project/Project-Build-an-ML-Pipeline-Starter/src/eda/wandb/run-20230412_183404-cl95qrqk</code>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       "Syncing run <strong><a href=\"https://wandb.ai/annyang1963/nyc_airbnb/runs/cl95qrqk\" target=\"_blank\">summer-galaxy-14</a></strong> to <a href=\"https://wandb.ai/annyang1963/nyc_airbnb\" target=\"_blank\">Weights & Biases</a> (<a href=\"https://wandb.me/run\" target=\"_blank\">docs</a>)<br/>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       " View project at <a href=\"https://wandb.ai/annyang1963/nyc_airbnb\" target=\"_blank\">https://wandb.ai/annyang1963/nyc_airbnb</a>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    },
+-    {
+-     "data": {
+-      "text/html": [
+-       " View run at <a href=\"https://wandb.ai/annyang1963/nyc_airbnb/runs/cl95qrqk\" target=\"_blank\">https://wandb.ai/annyang1963/nyc_airbnb/runs/cl95qrqk</a>"
+-      ],
+-      "text/plain": [
+-       "<IPython.core.display.HTML object>"
+-      ]
+-     },
+-     "metadata": {},
+-     "output_type": "display_data"
+-    }
+-   ],
++   "outputs": [],
+    "source": [
+     "import wandb\n",
+     "import pandas as pd\n",
+@@ -275,7 +135,7 @@
+   },
+   {
+    "cell_type": "markdown",
+-   "id": "472b8c0d",
++   "id": "0b01ec19",
+    "metadata": {},
+    "source": [
+     "2. Explore the data in df"
+@@ -284,7 +144,7 @@
+   {
+    "cell_type": "code",
+    "execution_count": 8,
+-   "id": "e7902159",
++   "id": "3844fc4f",
+    "metadata": {},
+    "outputs": [
+     {
+@@ -324,7 +184,7 @@
+   {
+    "cell_type": "code",
+    "execution_count": 9,
+-   "id": "ef6f1457",
++   "id": "0d600f8b",
+    "metadata": {},
+    "outputs": [
+     {
+@@ -513,7 +373,7 @@
+   {
+    "cell_type": "code",
+    "execution_count": 10,
+-   "id": "13548f59",
++   "id": "8d1c31a1",
+    "metadata": {},
+    "outputs": [
+     {
+@@ -696,7 +556,7 @@
+   },
+   {
+    "cell_type": "markdown",
+-   "id": "ecfee692",
++   "id": "dd1e912d",
+    "metadata": {},
+    "source": [
+     "3. What do you notice in the data? Look around and see what you can find.\n",
+@@ -706,7 +566,7 @@
+   },
+   {
+    "cell_type": "markdown",
+-   "id": "b4bb415f",
++   "id": "ea860b46",
+    "metadata": {},
+    "source": [
+     "4. Fix some of the little problems we have found in the data with the following code:"
+@@ -715,7 +575,7 @@
+   {
+    "cell_type": "code",
+    "execution_count": 11,
+-   "id": "4d685317",
++   "id": "a8aa25a4",
+    "metadata": {},
+    "outputs": [],
+    "source": [
+@@ -730,7 +590,7 @@
+   },
+   {
+    "cell_type": "markdown",
+-   "id": "17990df4",
++   "id": "122fe5cd",
+    "metadata": {},
+    "source": [
+     "Note how we did not impute missing values. We will do that in the inference pipeline, so we will be able to handle missing values also in production."
+@@ -738,7 +598,7 @@
+   },
+   {
+    "cell_type": "markdown",
+-   "id": "09287f29",
++   "id": "46c6413c",
+    "metadata": {},
+    "source": [
+     "5. Check with df.info() that all obvious problems have been solved"
+@@ -747,7 +607,7 @@
+   {
+    "cell_type": "code",
+    "execution_count": 12,
+-   "id": "b83b4970",
++   "id": "ad4a9cf8",
+    "metadata": {},
+    "outputs": [
+     {
+@@ -786,7 +646,7 @@
+   },
+   {
+    "cell_type": "markdown",
+-   "id": "d727e697",
++   "id": "394ec3cd",
+    "metadata": {},
+    "source": [
+     "6. Terminate the run by running `run.finish()`"
+@@ -795,7 +655,7 @@
+   {
+    "cell_type": "code",
+    "execution_count": 13,
+-   "id": "48b38586",
++   "id": "973c1532",
+    "metadata": {},
+    "outputs": [
+     {
+@@ -855,7 +715,7 @@
+   },
+   {
+    "cell_type": "markdown",
+-   "id": "13f82b21",
++   "id": "ab1d71b8",
+    "metadata": {},
+    "source": [
+     "7. Save the notebook."
+diff --git a/src/train_random_forest/conda.yml b/src/train_random_forest/conda.yml
+index e768419..2335152 100644
+--- a/src/train_random_forest/conda.yml
++++ b/src/train_random_forest/conda.yml
+@@ -10,4 +10,4 @@ dependencies:
+   - matplotlib=3.6.2
+   - pillow=8.1.2
+   - pip:
+-      - wandb==0.16.0
++      - wandb==0.13.9

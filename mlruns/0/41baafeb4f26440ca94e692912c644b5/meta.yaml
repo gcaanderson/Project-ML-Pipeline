@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/41baafeb4f26440ca94e692912c644b5/artifacts
+end_time: 1713483064920
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 41baafeb4f26440ca94e692912c644b5
+run_name: loud-moth-36
+run_uuid: 41baafeb4f26440ca94e692912c644b5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713483064212
+status: 4
+tags: []
+user_id: gcaanderson

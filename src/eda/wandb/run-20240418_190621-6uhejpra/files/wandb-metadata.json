@@ -1,0 +1,164 @@
+{
+    "os": "Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "python": "3.9.15",
+    "heartbeatAt": "2024-04-19T00:06:21.985281",
+    "startedAt": "2024-04-19T00:06:21.369074",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "src/eda/eda.ipynb",
+    "root": "/home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline",
+    "git": {
+        "remote": "https://github.com/gcaanderson/Project-ML-Pipeline.git",
+        "commit": "2f3f0660f1ae78f20f3702f26906bde3409fc69e"
+    },
+    "email": "gallagha24@yahoo.com",
+    "host": "DESKTOP-MGTK7L3",
+    "username": "gcaanderson",
+    "executable": "/home/gcaanderson/miniconda3/envs/mlops/bin/python",
+    "cpu_count": 12,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 3187.199999999999,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.2,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 1006.853931427002,
+        "used": 13.735881805419922
+    },
+    "gpu": "NVIDIA GeForce RTX 4060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4060",
+            "memory_total": 8585740288
+        }
+    ],
+    "memory": {
+        "total": 15.4937744140625
+    }
+}

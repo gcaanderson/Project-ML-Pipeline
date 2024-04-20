@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/82077be180f84b7eb22c7856e73704de/artifacts
+end_time: 1713567498332
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 82077be180f84b7eb22c7856e73704de
+run_name: valuable-steed-863
+run_uuid: 82077be180f84b7eb22c7856e73704de
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713567496948
+status: 4
+tags: []
+user_id: gcaanderson

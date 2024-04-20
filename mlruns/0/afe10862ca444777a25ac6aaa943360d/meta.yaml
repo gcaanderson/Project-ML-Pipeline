@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/afe10862ca444777a25ac6aaa943360d/artifacts
+end_time: 1713483399518
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: afe10862ca444777a25ac6aaa943360d
+run_name: abrasive-swan-527
+run_uuid: afe10862ca444777a25ac6aaa943360d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713483398740
+status: 4
+tags: []
+user_id: gcaanderson

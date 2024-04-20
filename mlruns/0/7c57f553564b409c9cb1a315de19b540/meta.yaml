@@ -1,0 +1,15 @@
+artifact_uri: file:///home/gcaanderson/Project-ML-Pipeline/Project-ML-Pipeline/mlruns/0/7c57f553564b409c9cb1a315de19b540/artifacts
+end_time: 1713483713949
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7c57f553564b409c9cb1a315de19b540
+run_name: selective-sloth-201
+run_uuid: 7c57f553564b409c9cb1a315de19b540
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713483713243
+status: 4
+tags: []
+user_id: gcaanderson
